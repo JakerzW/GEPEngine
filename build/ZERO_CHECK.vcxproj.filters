@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jaker\Documents\GitHub\GEPEngine\build\CMakeFiles\a6b60e8fe67c0f30a7ab497c5f16ad66\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2E0A88CB-93B7-3481-AAF0-25D4B3B72458}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
