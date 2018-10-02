@@ -1,4 +1,8 @@
 class gameObject
 {
-	int test;
+	private:
+		int objectNo;
+
+	public:
+		void addComponent(int value);
 };

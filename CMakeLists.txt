@@ -13,3 +13,5 @@ add_library(engine
 	src/engine/gameObject.cpp
 	src/engine/gameObject.h
 )
+
+target_link_libraries(game engine)
