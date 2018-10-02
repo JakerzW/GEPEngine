@@ -1,6 +1,15 @@
 cmake_minimum_required(VERSION 2.6)
 project(GEPENGINE)
 
-add_executable(engine
-	src/engine/entity.cpp
+include_directories(
+	src
+)
+
+add_executable(game
+	src/game/main.cpp
+)
+
+add_library(engine
+	src/engine/gameObject.cpp
+	src/engine/gameObject.h
 )

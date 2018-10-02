@@ -1,0 +1,4 @@
+class gameObject
+{
+	int test;
+};
