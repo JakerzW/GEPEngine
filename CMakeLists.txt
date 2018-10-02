@@ -3,6 +3,9 @@ project(GEPENGINE)
 
 include_directories(
 	src
+	contrib/glew/include
+	contrib/SDL2/include
+	contrib/SDL2_image/include
 )
 
 add_executable(game
