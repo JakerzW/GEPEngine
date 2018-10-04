@@ -1,6 +1,19 @@
 #include "gameObject.h"
 
-void gameObject::addComponent(int value)
+void GameObject::update()
 {
-	objectNo = value;
+}
+
+void GameObject::display()
+{
+}
+
+std::shared_ptr<Core> GameObject::getCore()
+{
+	return std::shared_ptr<Core>();
+}
+
+void GameObject::addComponent()
+{
+
 }

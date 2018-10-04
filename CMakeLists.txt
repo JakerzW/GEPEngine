@@ -13,8 +13,16 @@ add_executable(game
 )
 
 add_library(engine
+	src/engine/core.cpp
+	src/engine/core.h
 	src/engine/gameObject.cpp
 	src/engine/gameObject.h
+	src/engine/component.cpp
+	src/engine/component.h
+	src/engine/input.cpp
+	src/engine/input.h
+	src/engine/context.cpp
+	src/engine/context.h
 )
 
 target_link_libraries(game engine)
