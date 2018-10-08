@@ -1,4 +1,5 @@
-#include "gameObject.h"
+#include "GameObject.h"
+#include "Core.h"
 
 void GameObject::update()
 {

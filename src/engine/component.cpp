@@ -1,4 +1,8 @@
-#include "component.h"
+#include "Component.h"
+#include "GameObject.h"
+#include "Core.h"
+#include "Context.h"
+#include "Input.h"
 
 void Component::onInit()
 {

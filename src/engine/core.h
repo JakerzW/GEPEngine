@@ -1,10 +1,9 @@
 #include <memory>
 #include <vector>
 
-#include <engine\gameObject.h>
-#include <engine\component.h>
-#include <engine\context.h>
-#include <engine\input.h>
+class GameObject;
+class Context;
+class Input;
 
 class Core
 {

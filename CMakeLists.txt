@@ -8,21 +8,27 @@ include_directories(
 	contrib/SDL2_image/include
 )
 
+link_directories(
+	${CMAKE_SOURCE_DIR}/contrib/SDL2/lib
+	${CMAKE_SOURCE_DIR}/contrib/SDL2_image/lib
+	${CMAKE_SOURCE_DIR}/contrib/glew/lib	
+)
+
 add_executable(game
 	src/game/main.cpp
 )
 
 add_library(engine
-	src/engine/core.cpp
-	src/engine/core.h
-	src/engine/gameObject.cpp
-	src/engine/gameObject.h
-	src/engine/component.cpp
-	src/engine/component.h
-	src/engine/input.cpp
-	src/engine/input.h
-	src/engine/context.cpp
-	src/engine/context.h
+	src/engine/Core.cpp
+	src/engine/Core.h
+	src/engine/GameObject.cpp
+	src/engine/GameObject.h
+	src/engine/Component.cpp
+	src/engine/Component.h
+	src/engine/Input.cpp
+	src/engine/Input.h
+	src/engine/Context.cpp
+	src/engine/Context.h
 )
 
 target_link_libraries(game engine)

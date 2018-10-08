@@ -1,7 +1,8 @@
 #include <memory>
 #include <vector>
 
-#include <engine\component.h>
+class Core;
+class Component;
 
 class GameObject
 {

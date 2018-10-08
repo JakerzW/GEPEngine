@@ -1,5 +1,10 @@
 #include <memory>
 
+class GameObject;
+class Core;
+class Input;
+class Context;
+
 class Component
 {
 	private:
