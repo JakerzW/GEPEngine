@@ -14,21 +14,32 @@ link_directories(
 	${CMAKE_SOURCE_DIR}/contrib/glew/lib	
 )
 
-add_executable(game
-	src/game/main.cpp
-)
-
 add_library(engine
+	src/engine/Component.cpp
+	src/engine/Component.h
+	src/engine/Context.cpp
+	src/engine/Context.h
 	src/engine/Core.cpp
 	src/engine/Core.h
 	src/engine/GameObject.cpp
 	src/engine/GameObject.h
-	src/engine/Component.cpp
-	src/engine/Component.h
 	src/engine/Input.cpp
 	src/engine/Input.h
-	src/engine/Context.cpp
-	src/engine/Context.h
+	src/engine/Renderer.cpp
+	src/engine/Renderer.h
+	src/engine/ShaderProgram.cpp
+	src/engine/ShaderProgram.h
+	src/engine/VertexArray.cpp
+	src/engine/VertexArray.h
+	src/engine/VertexBuffer.h
+	src/engine/VertexBuffer.cpp
+)
+
+target_link_libraries(engine SDL2 glew32 opengl32)
+
+add_executable(game
+	src/game/main.cpp
 )
 
 target_link_libraries(game engine)
+
