@@ -3,9 +3,10 @@ project(GEPENGINE)
 
 include_directories(
 	src
-	contrib/glew/include
 	contrib/SDL2/include
 	contrib/SDL2_image/include
+	contrib/glew/include
+	contrib/glm
 )
 
 link_directories(
