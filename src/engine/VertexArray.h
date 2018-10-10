@@ -16,7 +16,7 @@ class VertexArray
 
 	public:
 		VertexArray();
-		void setBuffer(std::string type, std::weak_ptr<VertexBuffer> buffer);
+		void setBuffer(std::string attribute, std::weak_ptr<VertexBuffer> buffer);
 		int getVertexCount();
 		GLuint getId();
 };

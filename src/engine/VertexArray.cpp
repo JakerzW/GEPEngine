@@ -8,13 +8,13 @@ VertexArray::VertexArray()
 	buffers.resize(10);
 }
 
-void VertexArray::setBuffer(std::string type, std::weak_ptr<VertexBuffer> buffer)
+void VertexArray::setBuffer(std::string attribute, std::weak_ptr<VertexBuffer> buffer)
 {
-	if (type == "Position")
+	if (attribute == "in_Position")
 	{
 		buffers.at(0) = buffer.lock();
 	}
-	if (type == "Colour")
+	if (attribute == "in_Color")
 	{
 		buffers.at(1) = buffer.lock();
 	}

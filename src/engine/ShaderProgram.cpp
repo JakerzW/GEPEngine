@@ -65,8 +65,8 @@ ShaderProgram::ShaderProgram(std::string vert, std::string frag)
 	id = glCreateProgram();
 	glAttachShader(id, vertexShaderId);
 	glAttachShader(id, fragmentShaderId);
-	glBindAttribLocation(id, 0, "Position");
-	glBindAttribLocation(id, 1, "Colour");
+	glBindAttribLocation(id, 0, "in_Position");
+	glBindAttribLocation(id, 1, "in_Color");
 
 	if (glGetError() != GL_NO_ERROR)
 	{
