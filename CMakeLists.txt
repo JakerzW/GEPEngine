@@ -16,6 +16,7 @@ link_directories(
 )
 
 add_library(engine
+	src/engine/Engine.h
 	src/engine/Component.cpp
 	src/engine/Component.h
 	src/engine/Context.cpp
@@ -28,6 +29,8 @@ add_library(engine
 	src/engine/Input.h
 	src/engine/Renderer.cpp
 	src/engine/Renderer.h
+	src/engine/Screen.cpp
+	src/engine/Screen.h
 	src/engine/ShaderProgram.cpp
 	src/engine/ShaderProgram.h
 	src/engine/VertexArray.cpp
@@ -38,7 +41,7 @@ add_library(engine
 
 target_link_libraries(engine SDL2 glew32 opengl32)
 
-add_executable(game
+add_executable(game 
 	src/game/main.cpp
 )
 
