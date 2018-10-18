@@ -36,6 +36,12 @@ void Screen::setScreenColour(int r, int g, int b, int a)
 	SDL_RenderPresent(renderer);
 }
 
+void Screen::drawWindow()
+{
+
+	SDL_GL_SwapWindow(window);
+}
+
 int Screen::getWidth()
 {
 	return width;

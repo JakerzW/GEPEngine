@@ -21,7 +21,7 @@ void Renderer::onInit()
 	shape->setBuffer("in_Position", positions);
 	shape->setBuffer("in_Color", colors);
 
-	shader = std::make_shared<ShaderProgram>("resources/shaders/simple.vert", "resources/shaders/simple.frag");
+	shader = std::make_shared<ShaderProgram>("../resources/shaders/simple.vert", "../resources/shaders/simple.frag");
 }
 
 void Renderer::onDisplay()

@@ -3,3 +3,4 @@
 #include "engine/Renderer.h"
 #include "engine/Screen.h"
 #include "engine/GameObject.h"
+#include "engine\Component.h"

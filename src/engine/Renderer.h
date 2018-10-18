@@ -5,7 +5,7 @@
 class VertexArray;
 class ShaderProgram;
 
-class Renderer
+class Renderer : public Component
 {
 	private:
 		std::shared_ptr<VertexArray> shape;

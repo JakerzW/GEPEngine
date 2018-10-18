@@ -1,3 +1,6 @@
+#ifndef ENGINE_CORE_H
+#define ENGINE_CORE_H
+
 #include <memory>
 #include <vector>
 
@@ -21,5 +24,8 @@ class Core
 		void start();
 		void stop();
 		void initScreen(int width, int height, const char* name);
-		std::shared_ptr<GameObject> addGameObject();	
+		std::shared_ptr<GameObject> addGameObject();
+		std::vector<std::shared_ptr<GameObject>> getGameObjects();
 };
+
+#endif

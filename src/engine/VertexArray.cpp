@@ -20,7 +20,7 @@ void VertexArray::setBuffer(std::string attribute, std::weak_ptr<VertexBuffer> b
 	}
 	else
 	{
-		throw std::exception();
+		//throw std::exception();
 	}
 
 	dirty = true;

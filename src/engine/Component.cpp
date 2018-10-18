@@ -22,12 +22,12 @@ void Component::onDisplay()
 
 std::shared_ptr<GameObject> Component::getGameObject()
 {
-	return std::shared_ptr<GameObject>();
+	return gameObject.lock();
 }
 
 std::shared_ptr<Core> Component::getCore()
 {
-	return std::shared_ptr<Core>();
+	return getGameObject()->getCore();
 }
 
 std::shared_ptr<Input> Component::getInput()
