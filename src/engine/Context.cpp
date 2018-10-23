@@ -1,6 +1,9 @@
 #include "context.h"
 
-float Context::getDeltaTime()
+namespace engine
 {
-	return deltaTime;
+	float Context::getDeltaTime()
+	{
+		return deltaTime;
+	}
 }

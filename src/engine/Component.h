@@ -3,29 +3,32 @@
 
 #include <memory>
 
-
-class GameObject;
-class Core;
-class Input;
-class Context;
-
-class Component
+namespace engine 
 {
-	private:		
-		
+	class GameObject;
+	class Core;
+	class Input;
+	class Context;
 
-	public:
-		virtual void onInit();
-		virtual void onBegin();
-		virtual void onUpdate();
-		virtual void onDisplay();
+	class Component
+	{
+		friend class GameObject;
 
-	    bool begun;
-		std::weak_ptr<GameObject> gameObject;		
-		std::shared_ptr<GameObject> getGameObject();
-		std::shared_ptr<Core> getCore();
-		std::shared_ptr<Input> getInput();
-		std::shared_ptr<Context> getContext();
-};
+		private:
+			bool begun;
+			std::weak_ptr<GameObject> gameObject;
+
+			virtual void onInit();
+			virtual void onBegin();
+			virtual void onUpdate();
+			virtual void onDisplay();		
+
+		public:		
+			std::shared_ptr<GameObject> getGameObject();
+			std::shared_ptr<Core> getCore();
+			std::shared_ptr<Input> getInput();
+			std::shared_ptr<Context> getContext();
+	};
+}
 
 #endif

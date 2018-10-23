@@ -1,9 +1,12 @@
-class Context
+namespace engine
 {
-	private:
+	class Context
+	{
+		private:
 		float deltaTime;
 
-	public:
+		public:
 		float getDeltaTime();
 
-};
+	};
+}

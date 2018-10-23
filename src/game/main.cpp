@@ -5,7 +5,7 @@
 
 #include <iostream>
 
-class TestScreen : public Component
+class TestScreen : public engine::Component
 {
 	public:
 	void onInit(std::string color)
@@ -30,13 +30,13 @@ class TestScreen : public Component
 };
 
 int main()
-{	std::shared_ptr<Core> core = Core::init();	std::shared_ptr<Screen> screen = Screen::init(core, 1280, 720, "My Window");
+{	std::shared_ptr<engine::Core> core = engine::Core::init();	std::shared_ptr<engine::Screen> screen = engine::Screen::init(core, 1280, 720, "My Window");
 	screen->setScreenColour(0, 0, 0, 255);
 	
-	std::shared_ptr<GameObject> e = core->addGameObject();
+	std::shared_ptr<engine::GameObject> e = core->addGameObject();
 	std::shared_ptr<TestScreen> ts = e->addComponent<TestScreen>("Green");
-	std::shared_ptr<Renderer> mr = e->addComponent<Renderer>();
-	std::shared_ptr<Renderer> mr2 = e->getComponent<Renderer>();
+	std::shared_ptr<engine::Renderer> mr = e->addComponent<engine::Renderer>();
+	std::shared_ptr<engine::Renderer> mr2 = e->getComponent<engine::Renderer>();
 
 	core->start();
 
