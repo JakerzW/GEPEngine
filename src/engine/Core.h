@@ -1,6 +1,7 @@
 #ifndef ENGINE_CORE_H
 #define ENGINE_CORE_H
 
+#include <iostream>
 #include <memory>
 #include <vector>
 
@@ -15,6 +16,8 @@ namespace engine
 	{
 		private:
 		bool running;
+		float idealFps;
+		float deltaTime;
 		std::shared_ptr<Context> context;
 		std::shared_ptr<Screen> screen;
 		std::shared_ptr<Input> input;
@@ -28,6 +31,7 @@ namespace engine
 		void initScreen(int width, int height, const char* name);
 		std::shared_ptr<GameObject> addGameObject();
 		std::vector<std::shared_ptr<GameObject>> getGameObjects();
+		void setIdealFps(float fps);
 	};
 }
 

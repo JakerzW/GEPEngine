@@ -18,20 +18,21 @@ class TestScreen : public engine::Component
 		std::cout << "onBegin" << std::endl;
 	}
 
-	void onTick()
+	void onUpdate()
 	{
-		std::cout << "onTick" << std::endl;
+		std::cout << "onUpdate" << std::endl;
 	}
 
 	void onDisplay()
 	{
-		std::cout << "onTick" << std::endl;
+		std::cout << "onDisplay" << std::endl;
 	}
 };
 
 int main()
 {	std::shared_ptr<engine::Core> core = engine::Core::init();	std::shared_ptr<engine::Screen> screen = engine::Screen::init(core, 1280, 720, "My Window");
 	screen->setScreenColour(0, 0, 0, 255);
+	core->setIdealFps(5.0f);
 	
 	std::shared_ptr<engine::GameObject> e = core->addGameObject();
 	std::shared_ptr<TestScreen> ts = e->addComponent<TestScreen>("Green");

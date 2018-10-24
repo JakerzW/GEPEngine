@@ -1,6 +1,5 @@
 #include "Core.h"
-#include "Screen.h"
-#include "GameObject.h"
+#include "Engine.h"
 
 namespace engine
 {
@@ -17,8 +16,13 @@ namespace engine
 	{
 		running = true;
 
+		std::shared_ptr<Context> context = std::make_shared<Context>();
+		context->initTime();
+
 		while (running)
 		{
+			deltaTime = context->getDeltaTime();
+
 			SDL_Event event = { 0 };
 			while (SDL_PollEvent(&event))
 			{
@@ -45,6 +49,12 @@ namespace engine
 			}
 
 			//screen->drawWindow();
+
+			if (idealFps > deltaTime)
+			{
+				//std::cout << "Delaying..." << std::endl;
+				SDL_Delay((idealFps - deltaTime) * 1000.0f);
+			}
 		}
 	}
 
@@ -72,6 +82,11 @@ namespace engine
 	std::vector<std::shared_ptr<GameObject>> Core::getGameObjects()
 	{
 		return gameObjects;
+	}
+
+	void Core::setIdealFps(float fps)
+	{
+		idealFps = 1.0f / fps;
 	}
 
 }
