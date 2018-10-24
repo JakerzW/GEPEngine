@@ -34,11 +34,11 @@ namespace engine
 			{
 				for (size_t i = 0; i < components.size(); i++)
 				{
-					std::shared_ptr<T> tst = std::dynamic_pointer_cast<T>(components.at(i));
+					std::shared_ptr<T> comp = std::dynamic_pointer_cast<T>(components.at(i));
 
-					if (tst)
+					if (comp)
 					{
-						return tst;
+						return comp;
 					}
 				}
 
@@ -68,6 +68,15 @@ namespace engine
 			{
 				ADDCOMPONENT
 					rtn->onInit(a, b);
+
+				return rtn;
+			}
+
+			template <typename T, typename A, typename B, typename C>
+			std::shared_ptr<T> addComponent(A a, B b, C c)
+			{
+				ADDCOMPONENT
+					rtn->onInit(a, b, c);
 
 				return rtn;
 			}

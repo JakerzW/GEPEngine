@@ -32,10 +32,9 @@ namespace engine
 
 	void Screen::setScreenColour(int r, int g, int b, int a)
 	{
-		renderer = SDL_CreateRenderer(window, -1, 0);
-		SDL_SetRenderDrawColor(renderer, r, g, b, a);
-		SDL_RenderClear(renderer);
-		SDL_RenderPresent(renderer);
+		glClearColor(r, g, b, a);
+		glClear(GL_COLOR_BUFFER_BIT);
+		SDL_GL_SwapWindow(window);
 	}
 
 	void Screen::drawWindow()

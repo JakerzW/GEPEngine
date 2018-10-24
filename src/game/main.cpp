@@ -31,13 +31,17 @@ class TestScreen : public engine::Component
 
 int main()
 {	std::shared_ptr<engine::Core> core = engine::Core::init();	std::shared_ptr<engine::Screen> screen = engine::Screen::init(core, 1280, 720, "My Window");
-	screen->setScreenColour(0, 0, 0, 255);
-	core->setIdealFps(5.0f);
+	screen->setScreenColour(255, 0, 0, 255);
+	core->setIdealFps(1.0f);
 	
-	std::shared_ptr<engine::GameObject> e = core->addGameObject();
-	std::shared_ptr<TestScreen> ts = e->addComponent<TestScreen>("Green");
-	std::shared_ptr<engine::Renderer> mr = e->addComponent<engine::Renderer>();
-	std::shared_ptr<engine::Renderer> mr2 = e->getComponent<engine::Renderer>();
+	std::shared_ptr<engine::GameObject> testScreen = core->addGameObject();
+	std::shared_ptr<TestScreen> ts = testScreen->addComponent<TestScreen>("Green");
+
+	/*std::shared_ptr<engine::Renderer> mr = testScreen->addComponent<engine::Renderer>();
+	std::shared_ptr<engine::Renderer> mr2 = testScreen->getComponent<engine::Renderer>();*/
+
+	std::shared_ptr<engine::GameObject> square = core->addGameObject();
+	std::shared_ptr<engine::Renderer> rn = square->addComponent<engine::Renderer>();
 
 	core->start();
 

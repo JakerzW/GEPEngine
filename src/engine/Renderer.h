@@ -17,5 +17,6 @@ namespace engine
 
 		public:
 		void onInit();
+		//void onBegin(glm::vec4 position, glm::vec3 colour);
 	};
 }

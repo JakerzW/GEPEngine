@@ -26,6 +26,12 @@ namespace engine
 		shader = std::make_shared<ShaderProgram>("../resources/shaders/simple.vert", "../resources/shaders/simple.frag");
 	}
 
+	//void Renderer::onBegin(glm::vec4 position, glm::vec3 colour)
+	//{
+	//	//shape->setBuffer("in_Position", position);
+
+	//}
+
 	void Renderer::onDisplay()
 	{
 		shader->setUniform("in_Model", glm::mat4(1.0f));
