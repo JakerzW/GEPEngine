@@ -1,0 +1,9 @@
+- Read through the source code from lab 9
+	- Understand the code on how a model is loaded
+	- Understand the projection matrix and how to load in my own models
+	- Add from the Vertex Array code to my own
+
+- Look at any newer versions of the UML diagrams
+- Start to create more components (e.g. transform)
+- Organise the dependencies of the classes
+- Start organising my UML diagram to carry on the engine
