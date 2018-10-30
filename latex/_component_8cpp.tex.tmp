@@ -1,0 +1,14 @@
+\hypertarget{_component_8cpp}{}\section{src/engine/\+Component.cpp File Reference}
+\label{_component_8cpp}\index{src/engine/\+Component.\+cpp@{src/engine/\+Component.\+cpp}}
+{\ttfamily \#include \char`\"{}Component.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Game\+Object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Context.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Input.\+h\char`\"{}}\newline
+Include dependency graph for Component.\+cpp\+:
+% FIG 0
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceengine}{engine}}
+\end{DoxyCompactItemize}

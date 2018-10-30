@@ -1,0 +1,147 @@
+\hypertarget{classengine_1_1_core}{}\section{engine\+:\+:Core Class Reference}
+\label{classengine_1_1_core}\index{engine\+::\+Core@{engine\+::\+Core}}
+
+
+{\ttfamily \#include $<$Core.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classengine_1_1_core_a77cf73564f2723b8ee3e1d2ea3a41245}{start}} ()
+\item 
+void \mbox{\hyperlink{classengine_1_1_core_a1dc20e15c8fa894c5049ecbaf7745c0d}{stop}} ()
+\item 
+void \mbox{\hyperlink{classengine_1_1_core_ae4f596a5326dea97c860171d6ffb6c7d}{init\+Screen}} (int width, int height, const char $\ast$name)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_game_object}{Game\+Object}} $>$ \mbox{\hyperlink{classengine_1_1_core_a1979ac12bd8a259218f42833fc230094}{add\+Game\+Object}} ()
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_game_object}{Game\+Object}} $>$ $>$ \mbox{\hyperlink{classengine_1_1_core_a2adaa238c7ad9d6a3ce461f0010ef71b}{get\+Game\+Objects}} ()
+\item 
+void \mbox{\hyperlink{classengine_1_1_core_aa7f9076e25297b4035c69c1c3cc636c9}{set\+Ideal\+Fps}} (float fps)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{classengine_1_1_core_ac6e2aa4ca0251d90f187fe650f6e6e4f}{init}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classengine_1_1_core_a0e72beaea8705d13ae972dc1bf4cc300}{running}}
+\item 
+float \mbox{\hyperlink{classengine_1_1_core_ae32c8d8c1027c64e14868cf3f83badcf}{ideal\+Fps}}
+\item 
+float \mbox{\hyperlink{classengine_1_1_core_a1db4830be707d120511783ca9fb390c8}{delta\+Time}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_context}{Context}} $>$ \mbox{\hyperlink{classengine_1_1_core_a279739fcb85a5af56dfa8cea70b905f8}{context}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_screen}{Screen}} $>$ \mbox{\hyperlink{classengine_1_1_core_a34a2a57e4555db8ce7577f257f680e90}{screen}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_input}{Input}} $>$ \mbox{\hyperlink{classengine_1_1_core_a2d52261488cd9cf11d08fe1506e70393}{input}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_game_object}{Game\+Object}} $>$ $>$ \mbox{\hyperlink{classengine_1_1_core_ab491c7476cbc80ec113f8341a6ebceff}{game\+Objects}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{classengine_1_1_core_a89121092947e17412760fe93a5967d8f}{self}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classengine_1_1_core_a1979ac12bd8a259218f42833fc230094}\label{classengine_1_1_core_a1979ac12bd8a259218f42833fc230094}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!add\+Game\+Object@{add\+Game\+Object}}
+\index{add\+Game\+Object@{add\+Game\+Object}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{add\+Game\+Object()}{addGameObject()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_game_object}{Game\+Object}} $>$ engine\+::\+Core\+::add\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classengine_1_1_core_a2adaa238c7ad9d6a3ce461f0010ef71b}\label{classengine_1_1_core_a2adaa238c7ad9d6a3ce461f0010ef71b}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!get\+Game\+Objects@{get\+Game\+Objects}}
+\index{get\+Game\+Objects@{get\+Game\+Objects}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{get\+Game\+Objects()}{getGameObjects()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_game_object}{Game\+Object}} $>$ $>$ engine\+::\+Core\+::get\+Game\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classengine_1_1_core_ac6e2aa4ca0251d90f187fe650f6e6e4f}\label{classengine_1_1_core_ac6e2aa4ca0251d90f187fe650f6e6e4f}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!init@{init}}
+\index{init@{init}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_core}{Core}} $>$ engine\+::\+Core\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classengine_1_1_core_ae4f596a5326dea97c860171d6ffb6c7d}\label{classengine_1_1_core_ae4f596a5326dea97c860171d6ffb6c7d}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!init\+Screen@{init\+Screen}}
+\index{init\+Screen@{init\+Screen}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{init\+Screen()}{initScreen()}}
+{\footnotesize\ttfamily void engine\+::\+Core\+::init\+Screen (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classengine_1_1_core_aa7f9076e25297b4035c69c1c3cc636c9}\label{classengine_1_1_core_aa7f9076e25297b4035c69c1c3cc636c9}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!set\+Ideal\+Fps@{set\+Ideal\+Fps}}
+\index{set\+Ideal\+Fps@{set\+Ideal\+Fps}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{set\+Ideal\+Fps()}{setIdealFps()}}
+{\footnotesize\ttfamily void engine\+::\+Core\+::set\+Ideal\+Fps (\begin{DoxyParamCaption}\item[{float}]{fps }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classengine_1_1_core_a77cf73564f2723b8ee3e1d2ea3a41245}\label{classengine_1_1_core_a77cf73564f2723b8ee3e1d2ea3a41245}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!start@{start}}
+\index{start@{start}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void engine\+::\+Core\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classengine_1_1_core_a1dc20e15c8fa894c5049ecbaf7745c0d}\label{classengine_1_1_core_a1dc20e15c8fa894c5049ecbaf7745c0d}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!stop@{stop}}
+\index{stop@{stop}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void engine\+::\+Core\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classengine_1_1_core_a279739fcb85a5af56dfa8cea70b905f8}\label{classengine_1_1_core_a279739fcb85a5af56dfa8cea70b905f8}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!context@{context}}
+\index{context@{context}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classengine_1_1_context}{Context}}$>$ engine\+::\+Core\+::context\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_core_a1db4830be707d120511783ca9fb390c8}\label{classengine_1_1_core_a1db4830be707d120511783ca9fb390c8}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!delta\+Time@{delta\+Time}}
+\index{delta\+Time@{delta\+Time}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{delta\+Time}{deltaTime}}
+{\footnotesize\ttfamily float engine\+::\+Core\+::delta\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_core_ab491c7476cbc80ec113f8341a6ebceff}\label{classengine_1_1_core_ab491c7476cbc80ec113f8341a6ebceff}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!game\+Objects@{game\+Objects}}
+\index{game\+Objects@{game\+Objects}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{game\+Objects}{gameObjects}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classengine_1_1_game_object}{Game\+Object}}$>$ $>$ engine\+::\+Core\+::game\+Objects\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_core_ae32c8d8c1027c64e14868cf3f83badcf}\label{classengine_1_1_core_ae32c8d8c1027c64e14868cf3f83badcf}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!ideal\+Fps@{ideal\+Fps}}
+\index{ideal\+Fps@{ideal\+Fps}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{ideal\+Fps}{idealFps}}
+{\footnotesize\ttfamily float engine\+::\+Core\+::ideal\+Fps\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_core_a2d52261488cd9cf11d08fe1506e70393}\label{classengine_1_1_core_a2d52261488cd9cf11d08fe1506e70393}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!input@{input}}
+\index{input@{input}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{input}{input}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classengine_1_1_input}{Input}}$>$ engine\+::\+Core\+::input\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_core_a0e72beaea8705d13ae972dc1bf4cc300}\label{classengine_1_1_core_a0e72beaea8705d13ae972dc1bf4cc300}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!running@{running}}
+\index{running@{running}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily bool engine\+::\+Core\+::running\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_core_a34a2a57e4555db8ce7577f257f680e90}\label{classengine_1_1_core_a34a2a57e4555db8ce7577f257f680e90}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!screen@{screen}}
+\index{screen@{screen}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{screen}{screen}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classengine_1_1_screen}{Screen}}$>$ engine\+::\+Core\+::screen\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_core_a89121092947e17412760fe93a5967d8f}\label{classengine_1_1_core_a89121092947e17412760fe93a5967d8f}} 
+\index{engine\+::\+Core@{engine\+::\+Core}!self@{self}}
+\index{self@{self}!engine\+::\+Core@{engine\+::\+Core}}
+\subsubsection{\texorpdfstring{self}{self}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classengine_1_1_core}{Core}}$>$ engine\+::\+Core\+::self\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/engine/\mbox{\hyperlink{_core_8h}{Core.\+h}}\item 
+src/engine/\mbox{\hyperlink{_core_8cpp}{Core.\+cpp}}\end{DoxyCompactItemize}

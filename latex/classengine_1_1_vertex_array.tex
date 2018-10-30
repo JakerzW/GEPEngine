@@ -1,0 +1,83 @@
+\hypertarget{classengine_1_1_vertex_array}{}\section{engine\+:\+:Vertex\+Array Class Reference}
+\label{classengine_1_1_vertex_array}\index{engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}}
+
+
+{\ttfamily \#include $<$Vertex\+Array.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classengine_1_1_vertex_array_a0aedfcbe62db51023f0ea76ef6dfacf3}{Vertex\+Array}} ()
+\item 
+void \mbox{\hyperlink{classengine_1_1_vertex_array_a1aae003f11e7f028131b582b21ac3e20}{set\+Buffer}} (std\+::string attribute, std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ buffer)
+\item 
+int \mbox{\hyperlink{classengine_1_1_vertex_array_a52784835eb15a6f6e3313abccd19aa7e}{get\+Vertex\+Count}} ()
+\item 
+G\+Luint \mbox{\hyperlink{classengine_1_1_vertex_array_a37d1f9e369ab5f3b934d6453d8ae4be0}{get\+Id}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \mbox{\hyperlink{classengine_1_1_vertex_array_af15674f47ec26673a0172c0719575c11}{id}}
+\item 
+bool \mbox{\hyperlink{classengine_1_1_vertex_array_a1bc7f85879e2629d2f3bca921f84e893}{dirty}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ $>$ \mbox{\hyperlink{classengine_1_1_vertex_array_a289920bd4066486097b28d1cbbb6be07}{buffers}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classengine_1_1_vertex_array_a0aedfcbe62db51023f0ea76ef6dfacf3}\label{classengine_1_1_vertex_array_a0aedfcbe62db51023f0ea76ef6dfacf3}} 
+\index{engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}!Vertex\+Array@{Vertex\+Array}}
+\index{Vertex\+Array@{Vertex\+Array}!engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{Vertex\+Array()}{VertexArray()}}
+{\footnotesize\ttfamily engine\+::\+Vertex\+Array\+::\+Vertex\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classengine_1_1_vertex_array_a37d1f9e369ab5f3b934d6453d8ae4be0}\label{classengine_1_1_vertex_array_a37d1f9e369ab5f3b934d6453d8ae4be0}} 
+\index{engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily G\+Luint engine\+::\+Vertex\+Array\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classengine_1_1_vertex_array_a52784835eb15a6f6e3313abccd19aa7e}\label{classengine_1_1_vertex_array_a52784835eb15a6f6e3313abccd19aa7e}} 
+\index{engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}!get\+Vertex\+Count@{get\+Vertex\+Count}}
+\index{get\+Vertex\+Count@{get\+Vertex\+Count}!engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{get\+Vertex\+Count()}{getVertexCount()}}
+{\footnotesize\ttfamily int engine\+::\+Vertex\+Array\+::get\+Vertex\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classengine_1_1_vertex_array_a1aae003f11e7f028131b582b21ac3e20}\label{classengine_1_1_vertex_array_a1aae003f11e7f028131b582b21ac3e20}} 
+\index{engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}!set\+Buffer@{set\+Buffer}}
+\index{set\+Buffer@{set\+Buffer}!engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{set\+Buffer()}{setBuffer()}}
+{\footnotesize\ttfamily void engine\+::\+Vertex\+Array\+::set\+Buffer (\begin{DoxyParamCaption}\item[{std\+::string}]{attribute,  }\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_vertex_buffer}{Vertex\+Buffer}} $>$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classengine_1_1_vertex_array_a289920bd4066486097b28d1cbbb6be07}\label{classengine_1_1_vertex_array_a289920bd4066486097b28d1cbbb6be07}} 
+\index{engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}!buffers@{buffers}}
+\index{buffers@{buffers}!engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{buffers}{buffers}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classengine_1_1_vertex_buffer}{Vertex\+Buffer}}$>$ $>$ engine\+::\+Vertex\+Array\+::buffers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_vertex_array_a1bc7f85879e2629d2f3bca921f84e893}\label{classengine_1_1_vertex_array_a1bc7f85879e2629d2f3bca921f84e893}} 
+\index{engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}!dirty@{dirty}}
+\index{dirty@{dirty}!engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{dirty}{dirty}}
+{\footnotesize\ttfamily bool engine\+::\+Vertex\+Array\+::dirty\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_vertex_array_af15674f47ec26673a0172c0719575c11}\label{classengine_1_1_vertex_array_af15674f47ec26673a0172c0719575c11}} 
+\index{engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}!id@{id}}
+\index{id@{id}!engine\+::\+Vertex\+Array@{engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily G\+Luint engine\+::\+Vertex\+Array\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/engine/\mbox{\hyperlink{_vertex_array_8h}{Vertex\+Array.\+h}}\item 
+src/engine/\mbox{\hyperlink{_vertex_array_8cpp}{Vertex\+Array.\+cpp}}\end{DoxyCompactItemize}

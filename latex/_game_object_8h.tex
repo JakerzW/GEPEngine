@@ -1,0 +1,39 @@
+\hypertarget{_game_object_8h}{}\section{src/engine/\+Game\+Object.h File Reference}
+\label{_game_object_8h}\index{src/engine/\+Game\+Object.\+h@{src/engine/\+Game\+Object.\+h}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for Game\+Object.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classengine_1_1_game_object}{engine\+::\+Game\+Object}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceengine}{engine}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_game_object_8h_a6869d9f71eebbab486a7839b37bfc3c6}{A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_game_object_8h_a6869d9f71eebbab486a7839b37bfc3c6}\label{_game_object_8h_a6869d9f71eebbab486a7839b37bfc3c6}} 
+\index{Game\+Object.\+h@{Game\+Object.\+h}!A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT@{A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT}}
+\index{A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT@{A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT}!Game\+Object.\+h@{Game\+Object.\+h}}
+\subsubsection{\texorpdfstring{A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT}{ADDCOMPONENT}}
+{\footnotesize\ttfamily \#define A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+std::shared\_ptr<T> rtn = std::make\_shared<T>(); \(\backslash\)
+        rtn->gameObject = \textcolor{keyword}{self}; \(\backslash\)
+        rtn->begun = \textcolor{keyword}{false}; \(\backslash\)
+        components.push\_back(rtn);
+\end{DoxyCode}

@@ -1,0 +1,107 @@
+\hypertarget{classengine_1_1_screen}{}\section{engine\+:\+:Screen Class Reference}
+\label{classengine_1_1_screen}\index{engine\+::\+Screen@{engine\+::\+Screen}}
+
+
+{\ttfamily \#include $<$Screen.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classengine_1_1_screen_a43f6d5b65f4b07dc4354732d290ba67a}{set\+Screen\+Colour}} (int r, int g, int b, int a)
+\item 
+void \mbox{\hyperlink{classengine_1_1_screen_a96423ea3424efa23037ecae01e4e0953}{draw\+Window}} ()
+\item 
+int \mbox{\hyperlink{classengine_1_1_screen_a0fd48117427d94314f2cbcd1cba09878}{get\+Width}} ()
+\item 
+int \mbox{\hyperlink{classengine_1_1_screen_ab183de0c976799b704adb5f95620f78e}{get\+Height}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_screen}{Screen}} $>$ \mbox{\hyperlink{classengine_1_1_screen_a23c3c7d3693189569cd9a514a48367fa}{init}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_core}{Core}} $>$ core\+Ptr, int \mbox{\hyperlink{classengine_1_1_screen_ad852df05bf71412c8d89a5b5cebbc558}{width}}, int \mbox{\hyperlink{classengine_1_1_screen_a37b0b2dbbce5369e8eca7d11068681e8}{height}}, const char $\ast$name)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classengine_1_1_screen_ad852df05bf71412c8d89a5b5cebbc558}{width}}
+\item 
+int \mbox{\hyperlink{classengine_1_1_screen_a37b0b2dbbce5369e8eca7d11068681e8}{height}}
+\item 
+S\+D\+L\+\_\+\+Window $\ast$ \mbox{\hyperlink{classengine_1_1_screen_a68b990377d88e0419ca47eb09d17524b}{window}}
+\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \mbox{\hyperlink{classengine_1_1_screen_a0d7f4947ebbeb49a841ee6a4d3cbdb19}{renderer}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{classengine_1_1_screen_ae27fce6edba72dcb68491e2e3708b133}{core}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classengine_1_1_screen_a96423ea3424efa23037ecae01e4e0953}\label{classengine_1_1_screen_a96423ea3424efa23037ecae01e4e0953}} 
+\index{engine\+::\+Screen@{engine\+::\+Screen}!draw\+Window@{draw\+Window}}
+\index{draw\+Window@{draw\+Window}!engine\+::\+Screen@{engine\+::\+Screen}}
+\subsubsection{\texorpdfstring{draw\+Window()}{drawWindow()}}
+{\footnotesize\ttfamily void engine\+::\+Screen\+::draw\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classengine_1_1_screen_ab183de0c976799b704adb5f95620f78e}\label{classengine_1_1_screen_ab183de0c976799b704adb5f95620f78e}} 
+\index{engine\+::\+Screen@{engine\+::\+Screen}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!engine\+::\+Screen@{engine\+::\+Screen}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily int engine\+::\+Screen\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classengine_1_1_screen_a0fd48117427d94314f2cbcd1cba09878}\label{classengine_1_1_screen_a0fd48117427d94314f2cbcd1cba09878}} 
+\index{engine\+::\+Screen@{engine\+::\+Screen}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!engine\+::\+Screen@{engine\+::\+Screen}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily int engine\+::\+Screen\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classengine_1_1_screen_a23c3c7d3693189569cd9a514a48367fa}\label{classengine_1_1_screen_a23c3c7d3693189569cd9a514a48367fa}} 
+\index{engine\+::\+Screen@{engine\+::\+Screen}!init@{init}}
+\index{init@{init}!engine\+::\+Screen@{engine\+::\+Screen}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_screen}{Screen}} $>$ engine\+::\+Screen\+::init (\begin{DoxyParamCaption}\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_core}{Core}} $>$}]{core\+Ptr,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classengine_1_1_screen_a43f6d5b65f4b07dc4354732d290ba67a}\label{classengine_1_1_screen_a43f6d5b65f4b07dc4354732d290ba67a}} 
+\index{engine\+::\+Screen@{engine\+::\+Screen}!set\+Screen\+Colour@{set\+Screen\+Colour}}
+\index{set\+Screen\+Colour@{set\+Screen\+Colour}!engine\+::\+Screen@{engine\+::\+Screen}}
+\subsubsection{\texorpdfstring{set\+Screen\+Colour()}{setScreenColour()}}
+{\footnotesize\ttfamily void engine\+::\+Screen\+::set\+Screen\+Colour (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b,  }\item[{int}]{a }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classengine_1_1_screen_ae27fce6edba72dcb68491e2e3708b133}\label{classengine_1_1_screen_ae27fce6edba72dcb68491e2e3708b133}} 
+\index{engine\+::\+Screen@{engine\+::\+Screen}!core@{core}}
+\index{core@{core}!engine\+::\+Screen@{engine\+::\+Screen}}
+\subsubsection{\texorpdfstring{core}{core}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classengine_1_1_core}{Core}}$>$ engine\+::\+Screen\+::core\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_screen_a37b0b2dbbce5369e8eca7d11068681e8}\label{classengine_1_1_screen_a37b0b2dbbce5369e8eca7d11068681e8}} 
+\index{engine\+::\+Screen@{engine\+::\+Screen}!height@{height}}
+\index{height@{height}!engine\+::\+Screen@{engine\+::\+Screen}}
+\subsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int engine\+::\+Screen\+::height\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_screen_a0d7f4947ebbeb49a841ee6a4d3cbdb19}\label{classengine_1_1_screen_a0d7f4947ebbeb49a841ee6a4d3cbdb19}} 
+\index{engine\+::\+Screen@{engine\+::\+Screen}!renderer@{renderer}}
+\index{renderer@{renderer}!engine\+::\+Screen@{engine\+::\+Screen}}
+\subsubsection{\texorpdfstring{renderer}{renderer}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ engine\+::\+Screen\+::renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_screen_ad852df05bf71412c8d89a5b5cebbc558}\label{classengine_1_1_screen_ad852df05bf71412c8d89a5b5cebbc558}} 
+\index{engine\+::\+Screen@{engine\+::\+Screen}!width@{width}}
+\index{width@{width}!engine\+::\+Screen@{engine\+::\+Screen}}
+\subsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int engine\+::\+Screen\+::width\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_screen_a68b990377d88e0419ca47eb09d17524b}\label{classengine_1_1_screen_a68b990377d88e0419ca47eb09d17524b}} 
+\index{engine\+::\+Screen@{engine\+::\+Screen}!window@{window}}
+\index{window@{window}!engine\+::\+Screen@{engine\+::\+Screen}}
+\subsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Window$\ast$ engine\+::\+Screen\+::window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/engine/\mbox{\hyperlink{_screen_8h}{Screen.\+h}}\item 
+src/engine/\mbox{\hyperlink{_screen_8cpp}{Screen.\+cpp}}\end{DoxyCompactItemize}

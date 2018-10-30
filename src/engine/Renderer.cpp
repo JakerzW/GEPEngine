@@ -15,9 +15,9 @@ namespace engine
 		positions->add(glm::vec3(0.5f, -0.5f, 0.0f));
 
 		std::shared_ptr<VertexBuffer> colors = std::make_shared<VertexBuffer>();
-		colors->add(glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
+		colors->add(glm::vec4(0.0f, 0.0f, 0.0f, 1.0f));
 		colors->add(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
-		colors->add(glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
+		colors->add(glm::vec4(0.0f, 0.0f, 0.0f, 1.0f));
 
 		shape = std::make_shared<VertexArray>();
 		shape->setBuffer("in_Position", positions);

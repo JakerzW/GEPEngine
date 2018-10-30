@@ -1,0 +1,134 @@
+\hypertarget{classengine_1_1_game_object}{}\section{engine\+:\+:Game\+Object Class Reference}
+\label{classengine_1_1_game_object}\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{classengine_1_1_game_object_a228449afa903d63458376b5af46b477d}{get\+Core}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classengine_1_1_game_object_addd3fdd6fe482e20fb0dff73beaf37aa}{get\+Component}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classengine_1_1_game_object_ace1c57763236e72b58bf5b0da63b196d}{add\+Component}} ()
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classengine_1_1_game_object_a625ab49a4c0f2d354c6d79796febe6ed}{add\+Component}} (A a)
+\item 
+{\footnotesize template$<$typename T , typename A , typename B $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classengine_1_1_game_object_a49fad8d248f540dd600295ba29a44cc0}{add\+Component}} (A a, B b)
+\item 
+{\footnotesize template$<$typename T , typename A , typename B , typename C $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classengine_1_1_game_object_add2ff6419d40173c98721e464ae6e54d}{add\+Component}} (A a, B b, C c)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classengine_1_1_game_object_aaf47f528862a2d631ee6969ba18e317e}{update}} ()
+\item 
+void \mbox{\hyperlink{classengine_1_1_game_object_a97bc684bf74b1619e1071e939a9c3c48}{display}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_component}{Component}} $>$ $>$ \mbox{\hyperlink{classengine_1_1_game_object_a46356123cbc0e594f6f8eeb3bdd054a5}{components}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_game_object}{Game\+Object}} $>$ \mbox{\hyperlink{classengine_1_1_game_object_a4214abdb224cfbf47f9ee42cd3223250}{self}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{classengine_1_1_game_object_a7ab760fa75feeec53424e717f394c3dd}{core}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classengine_1_1_game_object_a4107254ac74f90d4f91e810d755b98c2}{Core}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classengine_1_1_game_object_ace1c57763236e72b58bf5b0da63b196d}\label{classengine_1_1_game_object_ace1c57763236e72b58bf5b0da63b196d}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!add\+Component@{add\+Component}}
+\index{add\+Component@{add\+Component}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{add\+Component()}{addComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ engine\+::\+Game\+Object\+::add\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classengine_1_1_game_object_a625ab49a4c0f2d354c6d79796febe6ed}\label{classengine_1_1_game_object_a625ab49a4c0f2d354c6d79796febe6ed}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!add\+Component@{add\+Component}}
+\index{add\+Component@{add\+Component}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{add\+Component()}{addComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename A $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ engine\+::\+Game\+Object\+::add\+Component (\begin{DoxyParamCaption}\item[{A}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classengine_1_1_game_object_a49fad8d248f540dd600295ba29a44cc0}\label{classengine_1_1_game_object_a49fad8d248f540dd600295ba29a44cc0}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!add\+Component@{add\+Component}}
+\index{add\+Component@{add\+Component}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{add\+Component()}{addComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename A , typename B $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ engine\+::\+Game\+Object\+::add\+Component (\begin{DoxyParamCaption}\item[{A}]{a,  }\item[{B}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classengine_1_1_game_object_add2ff6419d40173c98721e464ae6e54d}\label{classengine_1_1_game_object_add2ff6419d40173c98721e464ae6e54d}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!add\+Component@{add\+Component}}
+\index{add\+Component@{add\+Component}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{add\+Component()}{addComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename A , typename B , typename C $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ engine\+::\+Game\+Object\+::add\+Component (\begin{DoxyParamCaption}\item[{A}]{a,  }\item[{B}]{b,  }\item[{C}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classengine_1_1_game_object_a97bc684bf74b1619e1071e939a9c3c48}\label{classengine_1_1_game_object_a97bc684bf74b1619e1071e939a9c3c48}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!display@{display}}
+\index{display@{display}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void engine\+::\+Game\+Object\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_game_object_addd3fdd6fe482e20fb0dff73beaf37aa}\label{classengine_1_1_game_object_addd3fdd6fe482e20fb0dff73beaf37aa}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{get\+Component()}{getComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ engine\+::\+Game\+Object\+::get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classengine_1_1_game_object_a228449afa903d63458376b5af46b477d}\label{classengine_1_1_game_object_a228449afa903d63458376b5af46b477d}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!get\+Core@{get\+Core}}
+\index{get\+Core@{get\+Core}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{get\+Core()}{getCore()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classengine_1_1_core}{Core}} $>$ engine\+::\+Game\+Object\+::get\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classengine_1_1_game_object_aaf47f528862a2d631ee6969ba18e317e}\label{classengine_1_1_game_object_aaf47f528862a2d631ee6969ba18e317e}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!update@{update}}
+\index{update@{update}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void engine\+::\+Game\+Object\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classengine_1_1_game_object_a4107254ac74f90d4f91e810d755b98c2}\label{classengine_1_1_game_object_a4107254ac74f90d4f91e810d755b98c2}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!Core@{Core}}
+\index{Core@{Core}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{Core}{Core}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classengine_1_1_core}{Core}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classengine_1_1_game_object_a46356123cbc0e594f6f8eeb3bdd054a5}\label{classengine_1_1_game_object_a46356123cbc0e594f6f8eeb3bdd054a5}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!components@{components}}
+\index{components@{components}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classengine_1_1_component}{Component}}$>$ $>$ engine\+::\+Game\+Object\+::components\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_game_object_a7ab760fa75feeec53424e717f394c3dd}\label{classengine_1_1_game_object_a7ab760fa75feeec53424e717f394c3dd}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!core@{core}}
+\index{core@{core}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{core}{core}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classengine_1_1_core}{Core}}$>$ engine\+::\+Game\+Object\+::core\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classengine_1_1_game_object_a4214abdb224cfbf47f9ee42cd3223250}\label{classengine_1_1_game_object_a4214abdb224cfbf47f9ee42cd3223250}} 
+\index{engine\+::\+Game\+Object@{engine\+::\+Game\+Object}!self@{self}}
+\index{self@{self}!engine\+::\+Game\+Object@{engine\+::\+Game\+Object}}
+\subsubsection{\texorpdfstring{self}{self}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classengine_1_1_game_object}{Game\+Object}}$>$ engine\+::\+Game\+Object\+::self\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/engine/\mbox{\hyperlink{_game_object_8h}{Game\+Object.\+h}}\item 
+src/engine/\mbox{\hyperlink{_game_object_8cpp}{Game\+Object.\+cpp}}\end{DoxyCompactItemize}
