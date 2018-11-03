@@ -14,6 +14,24 @@ namespace engine
 		}
 	}
 
+	void VertexBuffer::add(glm::vec2 value)
+	{
+		if (!elements)
+		{
+			elements = 2;
+		}
+
+		if (elements != 2)
+		{
+			throw std::exception();
+		}
+
+		data.push_back(value.x);
+		data.push_back(value.y);
+
+		dirty = true;
+	}
+
 	void VertexBuffer::add(glm::vec3 value)
 	{
 		if (!elements)
