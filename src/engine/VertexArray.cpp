@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <memory>
 
 namespace engine
 {
@@ -83,7 +84,7 @@ namespace engine
 
 		if (!file.is_open())
 		{
-			throw std::exception();
+			throw std::exception("Object file is not open.");
 		}
 
 		std::string line;
@@ -105,7 +106,7 @@ namespace engine
 
 			if (splitLine.at(0) == "v")
 			{
-				//if (!positionBuffer) positionBuffer = new VertexBuffer();
+				if (!positionBuffer) positionBuffer = std::make_shared<VertexBuffer>();
 
 				positions.push_back(glm::vec3(
 					atof(splitLine.at(1).c_str()),
@@ -114,7 +115,7 @@ namespace engine
 			}
 			else if (splitLine.at(0) == "vt")
 			{
-				//if (!texCoordBuffer) texCoordBuffer = new VertexBuffer();
+				if (!texCoordBuffer) texCoordBuffer = std::make_shared<VertexBuffer>();
 
 				texCoords.push_back(glm::vec2(
 					atof(splitLine.at(1).c_str()),
@@ -122,7 +123,7 @@ namespace engine
 			}
 			else if (splitLine.at(0) == "vn")
 			{
-				//if (!normalBuffer) normalBuffer = new VertexBuffer();
+				if (!normalBuffer) normalBuffer = std::make_shared<VertexBuffer>();
 
 				normals.push_back(glm::vec3(
 					atof(splitLine.at(1).c_str()),

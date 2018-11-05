@@ -1,6 +1,7 @@
 #include "Component.h"
 
 #include <memory>
+#include <string>
 
 namespace engine
 {
@@ -10,13 +11,14 @@ namespace engine
 	class Renderer : public Component
 	{
 		private:
-		std::shared_ptr<VertexArray> shape;
+		std::shared_ptr<VertexArray> model;
 		std::shared_ptr<ShaderProgram> shader;
+		std::string path;
 
 		void onDisplay();
 
 		public:
 		void onInit();
-		//void onBegin(glm::vec4 position, glm::vec3 colour);
+		void setObjPath(std::string filePath);
 	};
 }

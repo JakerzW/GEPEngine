@@ -37,11 +37,12 @@ int main()
 	std::shared_ptr<engine::GameObject> testScreen = core->addGameObject();
 	std::shared_ptr<TestScreen> ts = testScreen->addComponent<TestScreen>("Green");
 
-	/*std::shared_ptr<engine::Renderer> mr = testScreen->addComponent<engine::Renderer>();
-	std::shared_ptr<engine::Renderer> mr2 = testScreen->getComponent<engine::Renderer>();*/
+	std::shared_ptr<engine::GameObject> cube = core->addGameObject();
+	std::shared_ptr<engine::Renderer> cubeRend = cube->addComponent<engine::Renderer>();
+	//std::shared_ptr<engine::Renderer> cubeTrans = cube->addComponent<engine::Transform>();
 
-	std::shared_ptr<engine::GameObject> square = core->addGameObject();
-	std::shared_ptr<engine::Renderer> rn = square->addComponent<engine::Renderer>();
+	cubeRend->setObjPath("../resources/models/cube.obj");
+	//cubeTrans->setTransform(data)...
 
 	core->start();
 
