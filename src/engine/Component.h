@@ -9,6 +9,7 @@ namespace engine
 	class Core;
 	class Input;
 	class Context;
+	class Transform;
 
 	class Component
 	{
@@ -28,6 +29,7 @@ namespace engine
 			std::shared_ptr<Core> getCore();
 			std::shared_ptr<Input> getInput();
 			std::shared_ptr<Context> getContext();
+			std::shared_ptr<Transform> getTransform();
 	};
 }
 

@@ -19,7 +19,7 @@ namespace engine
 		colors->add(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
 		colors->add(glm::vec4(0.0f, 0.0f, 0.0f, 1.0f));
 
-		model = std::make_shared<VertexArray>();
+		if (!model)	model = std::make_shared<VertexArray>();
 		model->setBuffer("in_Position", positions);
 		model->setBuffer("in_Color", colors);
 
@@ -30,6 +30,13 @@ namespace engine
 	{
 		path = filePath;
 		model = std::make_shared<VertexArray>(path);
+	}
+
+	void Renderer::onUpdate()
+	{
+		std::shared_ptr<Transform> trans = getTransform();
+		trans->
+		//model = getPosition via getTransform via getGameobject
 	}
 
 	void Renderer::onDisplay()

@@ -41,4 +41,8 @@ namespace engine
 	{
 		return std::shared_ptr<Context>();
 	}
+	std::shared_ptr<Transform> Component::getTransform()
+	{
+		return getGameObject()->getComponent<Transform>();
+	}
 }

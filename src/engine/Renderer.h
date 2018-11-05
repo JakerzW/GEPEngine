@@ -1,5 +1,8 @@
 #include "Component.h"
 
+#include "glm.hpp"
+#include "ext.hpp"
+
 #include <memory>
 #include <string>
 
@@ -15,6 +18,7 @@ namespace engine
 		std::shared_ptr<ShaderProgram> shader;
 		std::string path;
 
+		void onUpdate();
 		void onDisplay();
 
 		public:

@@ -37,6 +37,8 @@ add_library(engine
 	src/engine/Screen.h
 	src/engine/ShaderProgram.cpp
 	src/engine/ShaderProgram.h
+	src/engine/Transform.cpp
+	src/engine/Transform.h
 	src/engine/VertexArray.cpp
 	src/engine/VertexArray.h
 	src/engine/VertexBuffer.h

@@ -8,9 +8,9 @@
 class TestScreen : public engine::Component
 {
 	public:
-	void onInit(std::string color)
+	void onInit(std::string colour)
 	{
-		std::cout << "onInit " << color << std::endl;
+		std::cout << "onInit " << colour << std::endl;
 	}
 
 	void onBegin()
@@ -32,17 +32,19 @@ class TestScreen : public engine::Component
 int main()
 {	std::shared_ptr<engine::Core> core = engine::Core::init();	std::shared_ptr<engine::Screen> screen = engine::Screen::init(core, 1280, 720, "My Window");
 	screen->setScreenColour(0, 255, 0, 255);
-	core->setIdealFps(60.0f);
+	core->setIdealFps(3.0f);
 	
 	std::shared_ptr<engine::GameObject> testScreen = core->addGameObject();
 	std::shared_ptr<TestScreen> ts = testScreen->addComponent<TestScreen>("Green");
 
 	std::shared_ptr<engine::GameObject> cube = core->addGameObject();
 	std::shared_ptr<engine::Renderer> cubeRend = cube->addComponent<engine::Renderer>();
-	//std::shared_ptr<engine::Renderer> cubeTrans = cube->addComponent<engine::Transform>();
+	std::shared_ptr<engine::Transform> cubeTran = cube->addComponent<engine::Transform>();
 
 	cubeRend->setObjPath("../resources/models/cube.obj");
-	//cubeTrans->setTransform(data)...
+	cubeTran->setPosition(glm::vec3(0.0f, -2.0f, -2.0f));
+	cubeTran->setRotation(glm::vec3(0.0f, 0.0f, 0.0f));
+	cubeTran->setScale(glm::vec3(2.0f, 2.0f, 2.0f));
 
 	core->start();
 
