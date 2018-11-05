@@ -35,7 +35,7 @@ namespace engine
 	void Renderer::onUpdate()
 	{
 		std::shared_ptr<Transform> trans = getTransform();
-		trans->
+		//trans->getPosition();
 		//model = getPosition via getTransform via getGameobject
 	}
 
