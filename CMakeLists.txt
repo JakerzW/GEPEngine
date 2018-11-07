@@ -21,6 +21,8 @@ endif()
 
 add_library(engine
 	src/engine/Engine.h
+	src/engine/Camera.cpp
+	src/engine/Camera.h
 	src/engine/Component.cpp
 	src/engine/Component.h
 	src/engine/Context.cpp

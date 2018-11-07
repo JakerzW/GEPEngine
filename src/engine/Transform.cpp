@@ -1,33 +1,37 @@
 #include "Transform.h"
 namespace engine
 {
-	void engine::Transform::setPosition(glm::vec3 pos)
+	
+	void Transform::setValue(std::string type, glm::vec3 value)
 	{
-		position = pos;
+		if (type == "Position")
+		{
+			position = value;
+		}
+		else if (type == "Rotation")
+		{
+			rotation = value;
+		}
+		else if (type == "Scale")
+		{
+			scale = value;
+		}
 	}
 
-	void engine::Transform::setRotation(glm::vec3 rot)
+	//Change to template and add angle
+	glm::vec3 Transform::getValue(std::string type)
 	{
-		rotation = rot;
-	}
-
-	void engine::Transform::setScale(glm::vec3 sca)
-	{
-		scale = sca;
-	}
-
-	glm::vec3 engine::Transform::getPosition()
-	{
-		return position;
-	}
-
-	glm::vec3 engine::Transform::getRotation()
-	{
-		return rotation;
-	}
-
-	glm::vec3 engine::Transform::getScale()
-	{
-		return scale;
+		if (type == "Position")
+		{
+			return position;
+		}
+		else if (type == "Rotation")
+		{
+			return rotation;
+		}
+		else if (type == "Scale")
+		{
+			return scale;
+		}
 	}
 }

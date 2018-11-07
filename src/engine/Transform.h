@@ -1,6 +1,8 @@
 #include "Component.h"
 #include "glm.hpp"
 
+#include <string>
+
 namespace engine 
 {
 	class Transform : public Component
@@ -8,15 +10,10 @@ namespace engine
 		private:
 			glm::vec3 position;
 			glm::vec3 rotation;
-			glm::vec3 scale;			
+			glm::vec3 scale;
 
 		public:
-			void setPosition(glm::vec3 pos);
-			void setRotation(glm::vec3 rot);
-			void setScale(glm::vec3 sca);
-			glm::vec3 getPosition();
-			glm::vec3 getRotation();
-			glm::vec3 getScale();
+			void setValue(std::string type, glm::vec3 value);
+			glm::vec3 getValue(std::string type);
 	};
-
 }

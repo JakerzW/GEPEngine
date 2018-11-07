@@ -1,5 +1,3 @@
-#include "Component.h"
-
 #include "glm.hpp"
 #include "ext.hpp"
 
@@ -14,7 +12,7 @@ namespace engine
 	class Renderer : public Component
 	{
 		private:
-		std::shared_ptr<VertexArray> model;
+		std::shared_ptr<VertexArray> shape;
 		std::shared_ptr<ShaderProgram> shader;
 		std::string path;
 
