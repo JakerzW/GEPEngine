@@ -10,6 +10,7 @@ namespace engine
 {
 	class VertexArray;
 	class ShaderProgram;
+	class Camera;
 
 	class Renderer : public Component
 	{

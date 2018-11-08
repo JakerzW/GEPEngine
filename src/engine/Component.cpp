@@ -44,8 +44,14 @@ namespace engine
 	{
 		return getCore()->getContext();
 	}
+
 	std::shared_ptr<Transform> Component::getTransform()
 	{
 		return getGameObject()->getComponent<Transform>();
+	}
+
+	std::shared_ptr<Camera> Component::getCamera()
+	{
+		return getGameObject()->getComponent<Camera>();
 	}
 }

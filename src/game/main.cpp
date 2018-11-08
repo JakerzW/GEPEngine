@@ -5,7 +5,7 @@
 
 #include <iostream>
 
-class TestScreen : public engine::Component
+class OpDisplay : public engine::Component
 {
 	public:
 	void onInit(std::string colour)
@@ -32,18 +32,19 @@ class TestScreen : public engine::Component
 int main()
 {
 	std::shared_ptr<engine::Core> core = engine::Core::init();
-	std::shared_ptr<engine::Screen> screen = engine::Screen::init(core, 1280, 720, "My Window");
-	screen->setScreenColour(0, 255, 0, 255);
+	std::shared_ptr<engine::Screen> screen = engine::Screen::init(core, 1280, 720, "Operation Display");
+	screen->setScreenColour(0, 0, 0, 255);
 	core->setIdealFps(3.0f);
 	
-	std::shared_ptr<engine::GameObject> testScreen = core->addGameObject();
-	std::shared_ptr<TestScreen> ts = testScreen->addComponent<TestScreen>("Green");
+	std::shared_ptr<engine::GameObject> opDisplay = core->addGameObject();
+	std::shared_ptr<OpDisplay> od = opDisplay->addComponent<OpDisplay>("Start-up successful");
 
 	std::shared_ptr<engine::GameObject> cube = core->addGameObject();
 	std::shared_ptr<engine::Renderer> cubeRend = cube->addComponent<engine::Renderer>();
 	std::shared_ptr<engine::Transform> cubeTf = cube->addComponent<engine::Transform>();
 
-	//Camera needs to be setup as a game object with it's
+	std::shared_ptr<engine::Camera> camera;
+	camera->init();
 
 	cubeRend->setObjPath("../resources/models/cube.obj");
 	cubeTf->setValue("Position", glm::vec3(0.0f, -2.0f, -2.0f));

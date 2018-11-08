@@ -2,6 +2,14 @@
 
 namespace engine
 {
+	std::shared_ptr<Camera> Camera::init()
+	{
+		std::shared_ptr<Camera> rtn = std::make_shared<Camera>();
+		rtn->setProjMatrix(glm::mat4(1.0f));
+		//Set shader perspective
+		return rtn;
+	}
+
 	std::shared_ptr<Camera> Camera::init(glm::mat4 firstProjMatrix, glm::vec3 firstPos, glm::vec3 firstRot)
 	{
 		std::shared_ptr<Camera> rtn = std::make_shared<Camera>();

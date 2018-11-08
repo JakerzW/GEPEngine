@@ -3,6 +3,7 @@
 #include "Context.h"
 #include "Screen.h"
 #include "Input.h"
+#include "Camera.h"
 
 namespace engine
 {
@@ -90,6 +91,11 @@ namespace engine
 	std::shared_ptr<Context> Core::getContext()
 	{
 		return context;
+	}
+
+	std::shared_ptr<Camera> Core::getCamera()
+	{
+		return camera;
 	}
 
 	void Core::setIdealFps(float fps)

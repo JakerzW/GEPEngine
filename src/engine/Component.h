@@ -10,6 +10,7 @@ namespace engine
 	class Input;
 	class Context;
 	class Transform;
+	class Camera;
 
 	class Component
 	{
@@ -30,6 +31,7 @@ namespace engine
 			std::shared_ptr<Input> getInput();
 			std::shared_ptr<Context> getContext();
 			std::shared_ptr<Transform> getTransform();
+			std::shared_ptr<Camera> getCamera();
 	};
 }
 

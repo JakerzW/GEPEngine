@@ -11,6 +11,7 @@ namespace engine
 	class Context;
 	class Screen;
 	class Input;
+	class Camera;
 
 	class Core
 	{
@@ -21,6 +22,7 @@ namespace engine
 		std::shared_ptr<Context> context;
 		std::shared_ptr<Screen> screen;
 		std::shared_ptr<Input> input;
+		std::shared_ptr<Camera> camera;
 		std::vector<std::shared_ptr<GameObject>> gameObjects;
 		std::weak_ptr<Core> self;
 
@@ -33,6 +35,7 @@ namespace engine
 		std::shared_ptr<GameObject> addGameObject();
 		std::vector<std::shared_ptr<GameObject>> getGameObjects();
 		std::shared_ptr<Context> getContext();
+		std::shared_ptr<Camera> getCamera();
 	};
 }
 

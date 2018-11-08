@@ -39,7 +39,6 @@ namespace engine
 
 	void Screen::drawWindow()
 	{
-
 		SDL_GL_SwapWindow(window);
 	}
 

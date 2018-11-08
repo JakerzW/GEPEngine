@@ -14,6 +14,7 @@ namespace engine
 {
 	class Core;
 	class Component;
+	class Camera;
 
 	class GameObject
 	{
