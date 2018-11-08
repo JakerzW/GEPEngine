@@ -52,6 +52,6 @@ namespace engine
 
 	std::shared_ptr<Camera> Component::getCamera()
 	{
-		return getGameObject()->getComponent<Camera>();
+		return getCore()->getCamera();
 	}
 }

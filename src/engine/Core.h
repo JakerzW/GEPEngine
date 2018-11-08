@@ -1,6 +1,8 @@
 #ifndef ENGINE_CORE_H
 #define ENGINE_CORE_H
 
+#include <ext.hpp>
+
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -35,6 +37,8 @@ namespace engine
 		std::shared_ptr<GameObject> addGameObject();
 		std::vector<std::shared_ptr<GameObject>> getGameObjects();
 		std::shared_ptr<Context> getContext();
+		std::shared_ptr<Camera> addCamera();
+		std::shared_ptr<Camera> addCamera(glm::mat4 firstProjMatrix, glm::vec3 firstPos, glm::vec3 firstRot);
 		std::shared_ptr<Camera> getCamera();
 	};
 }

@@ -43,8 +43,7 @@ int main()
 	std::shared_ptr<engine::Renderer> cubeRend = cube->addComponent<engine::Renderer>();
 	std::shared_ptr<engine::Transform> cubeTf = cube->addComponent<engine::Transform>();
 
-	std::shared_ptr<engine::Camera> camera;
-	camera->init();
+	std::shared_ptr<engine::Camera> camera = core->addCamera();
 
 	cubeRend->setObjPath("../resources/models/cube.obj");
 	cubeTf->setValue("Position", glm::vec3(0.0f, -2.0f, -2.0f));
