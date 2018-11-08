@@ -41,12 +41,14 @@ int main()
 
 	std::shared_ptr<engine::GameObject> cube = core->addGameObject();
 	std::shared_ptr<engine::Renderer> cubeRend = cube->addComponent<engine::Renderer>();
-	std::shared_ptr<engine::Transform> cubeTran = cube->addComponent<engine::Transform>();
+	std::shared_ptr<engine::Transform> cubeTf = cube->addComponent<engine::Transform>();
+
+	//Camera needs to be setup as a game object with it's
 
 	cubeRend->setObjPath("../resources/models/cube.obj");
-	cubeTran->setValue("Position", glm::vec3(0.0f, -2.0f, -2.0f));
-	cubeTran->setValue("Rotation", glm::vec3(0.0f, 0.0f, 0.0f));
-	cubeTran->setValue("Scale", glm::vec3(2.0f, 2.0f, 2.0f));
+	cubeTf->setValue("Position", glm::vec3(0.0f, -2.0f, -2.0f));
+	cubeTf->setValue("Rotation", glm::vec3(0.0f, 0.0f, 0.0f));
+	cubeTf->setValue("Scale", glm::vec3(2.0f, 2.0f, 2.0f));
 
 	core->start();
 

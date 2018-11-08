@@ -3,6 +3,8 @@
 #include "Core.h"
 #include "Context.h"
 #include "Input.h"
+#include "Transform.h"
+#include "Camera.h"
 
 namespace engine 
 {
@@ -34,12 +36,13 @@ namespace engine
 
 	std::shared_ptr<Input> Component::getInput()
 	{
+		//return getCore()->getInput();
 		return std::shared_ptr<Input>();
 	}
 
 	std::shared_ptr<Context> Component::getContext()
 	{
-		return std::shared_ptr<Context>();
+		return getCore()->getContext();
 	}
 	std::shared_ptr<Transform> Component::getTransform()
 	{

@@ -7,6 +7,7 @@ include_directories(
 	contrib/SDL2_image/include
 	contrib/glew/include
 	contrib/glm
+	contrib/stb_image
 )
 
 link_directories(
@@ -39,6 +40,8 @@ add_library(engine
 	src/engine/Screen.h
 	src/engine/ShaderProgram.cpp
 	src/engine/ShaderProgram.h
+	src/engine/Texture.cpp
+	src/engine/Texture.h
 	src/engine/Transform.cpp
 	src/engine/Transform.h
 	src/engine/VertexArray.cpp

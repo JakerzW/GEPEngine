@@ -1,4 +1,10 @@
-#include "Engine.h"
+#include "Renderer.h"
+#include "VertexBuffer.h"
+#include "VertexArray.h"
+#include "ShaderProgram.h"
+#include "GameObject.h"
+#include "Transform.h"
+#include "Camera.h"
 
 #include <iostream>
 
@@ -29,30 +35,9 @@ namespace engine
 		shape = std::make_shared<VertexArray>(path);
 	}
 
-	void Renderer::onUpdate()
-	{
-		std::shared_ptr<Transform> tf = getGameObject()->getComponent<Transform>();
-		if (!tf)
-		{
-			throw std::exception("Transform for GameObject not found.");
-		}
-
-		glm::mat4 camera = getGameObject()->getComponent<Camera>()->getProjMatrix();
-		if (!cam)
-		{
-			throw std::exception("Camera for GameObject not found.");
-		}		
-
-		camera = glm::translate(cam, tf->getPosition("Position"));
-		//camera = glm::rotate(model, angle, tf->getValue("Rotation"));
-		camera = glm::scale(cam, tf->getValue("Scale");
-
-		getGameObject()->getComponent<Camera>()->setProjMatrix(camera);
-	}
-
 	void Renderer::onDisplay()
 	{
-		shader->setUniform("in_shape", glm::mat4(1.0f));
+		shader->setUniform("in_Model", glm::mat4(1.0f));
 		shader->setUniform("in_Projection", glm::mat4(1.0f));
 		shader->draw(*shape);
 	}

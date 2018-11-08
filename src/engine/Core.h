@@ -29,9 +29,10 @@ namespace engine
 		void start();
 		void stop();
 		void initScreen(int width, int height, const char* name);
+		void setIdealFps(float fps);
 		std::shared_ptr<GameObject> addGameObject();
 		std::vector<std::shared_ptr<GameObject>> getGameObjects();
-		void setIdealFps(float fps);
+		std::shared_ptr<Context> getContext();
 	};
 }
 

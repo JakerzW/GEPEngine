@@ -1,7 +1,7 @@
 #include "Transform.h"
+
 namespace engine
-{
-	
+{	
 	void Transform::setValue(std::string type, glm::vec3 value)
 	{
 		if (type == "Position")

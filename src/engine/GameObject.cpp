@@ -1,7 +1,6 @@
 #include "GameObject.h"
 #include "Core.h"
 #include "Component.h"
-#include "Engine.h"
 
 namespace engine 
 {

@@ -42,7 +42,7 @@ namespace engine
 					}
 				}
 
-				throw std::exception();
+				throw std::exception("Error getting component.");
 			}
 
 			template <typename T>
