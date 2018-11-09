@@ -14,13 +14,12 @@ namespace engine
 {
 	class Core;
 	class Component;
-	class Camera;
 
 	class GameObject
 	{
 		friend class Core;
 
-		private:
+		protected:
 			std::vector<std::shared_ptr<Component>> components;
 			std::weak_ptr<GameObject> self;
 			std::weak_ptr<Core> core;

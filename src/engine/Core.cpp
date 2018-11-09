@@ -95,30 +95,35 @@ namespace engine
 
 	std::shared_ptr<Camera> Core::addCamera()
 	{
-		std::shared_ptr<Camera> newCamera = std::make_shared<Camera>();
-		
-		newCamera->init();
-		camera = newCamera;
+		std::shared_ptr<Camera> rtn = std::make_shared<Camera>();
+		gameObjects.push_back(rtn);
+		rtn->onInit();
+		rtn->self = rtn;
+		rtn->core = self;
+		camera = rtn;
 
 		return camera;
 	}
 
 	std::shared_ptr<Camera> Core::addCamera(glm::mat4 firstProjMatrix, glm::vec3 firstPos, glm::vec3 firstRot)
 	{
-		std::shared_ptr<Camera> newCamera = std::make_shared<Camera>();
-
-		newCamera->init(firstProjMatrix, firstPos, firstRot);
-		camera = newCamera;
+		std::shared_ptr<Camera> rtn = std::make_shared<Camera>();
+		gameObjects.push_back(rtn);
+		rtn->onInit(firstProjMatrix, firstPos, firstRot);
+		rtn->self = rtn;
+		rtn->core = self;
+		camera = rtn;
 
 		return camera;
 	}	
 
 	std::shared_ptr<Camera> Core::getCamera()
-	{
-		if (!camera)
+	{		
+		/*if (!camera)
 		{
 			throw std::exception("Camera not found.");
-		}
+		}*/
+		
 		return camera;
 	}
 
