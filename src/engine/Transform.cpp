@@ -5,13 +5,7 @@ namespace engine
 {
 	void Transform::onUpdate()
 	{
-		glm::mat4 pm = getCamera()->getProjMatrix();
-
-		pm = glm::translate(pm, position);
-		//pm = glm::rotate(pm, angle, rotation);
-		pm = glm::scale(pm, scale);
-
-		getCamera()->setProjMatrix(pm);
+		
 	}
 
 	void Transform::setValue(std::string type, glm::vec3 value)

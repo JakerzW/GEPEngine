@@ -45,7 +45,7 @@ int main()
 	std::shared_ptr<engine::Renderer> cubeRend = cube->addComponent<engine::Renderer>();
 	std::shared_ptr<engine::Transform> cubeTf = cube->addComponent<engine::Transform>();
 
-
+	core->getGameObjects();
 	/*cubeRend->setObjPath("../resources/models/cube.obj");
 	cubeTf->setValue("Position", glm::vec3(0.0f, -2.0f, -2.0f));
 	cubeTf->setValue("Rotation", glm::vec3(0.0f, 0.0f, 0.0f));

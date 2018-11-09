@@ -36,13 +36,13 @@ namespace engine
 
 	std::shared_ptr<Input> Component::getInput()
 	{
-		//return getCore()->getInput();
+		//return getGameObject()->getCore()->getInput();
 		return std::shared_ptr<Input>();
 	}
 
 	std::shared_ptr<Context> Component::getContext()
 	{
-		return getCore()->getContext();
+		return getGameObject()->getCore()->getContext();
 	}
 
 	std::shared_ptr<Transform> Component::getTransform()
@@ -52,6 +52,6 @@ namespace engine
 
 	std::shared_ptr<Camera> Component::getCamera()
 	{
-		return getCore()->getCamera();
+		return getGameObject()->getCore()->getCamera();
 	}
 }
