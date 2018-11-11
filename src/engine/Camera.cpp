@@ -1,6 +1,5 @@
 #include "Camera.h"
 #include "Core.h"
-#include "GameObject.h"
 
 namespace engine
 {

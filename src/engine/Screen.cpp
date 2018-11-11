@@ -3,9 +3,12 @@
 
 namespace engine
 {
-	std::shared_ptr<Screen> Screen::init(std::weak_ptr<Core> corePtr, int width, int height, const char* name)
+	std::shared_ptr<Screen> Screen::init(std::weak_ptr<Core> corePtr, int sWidth, int sHeight, const char* name)
 	{
 		std::shared_ptr<Screen> rtn = std::make_shared<Screen>();
+
+		rtn->width = sWidth;
+		rtn->height = sHeight;
 
 		rtn->core = corePtr;
 
@@ -32,6 +35,7 @@ namespace engine
 
 	void Screen::setScreenColour(int r, int g, int b, int a)
 	{
+		colours = glm::vec4(r, g, b, a);
 		glClearColor(r, g, b, a);
 		glClear(GL_COLOR_BUFFER_BIT);
 		SDL_GL_SwapWindow(window);
@@ -50,5 +54,9 @@ namespace engine
 	int Screen::getHeight()
 	{
 		return height;
+	}
+	float Screen::getRatio()
+	{
+		return (width / height);
 	}
 }

@@ -5,6 +5,7 @@
 #include "Input.h"
 #include "Transform.h"
 #include "Camera.h"
+#include "Screen.h"
 
 namespace engine 
 {
@@ -53,5 +54,9 @@ namespace engine
 	std::shared_ptr<Camera> Component::getCamera()
 	{
 		return getGameObject()->getCore()->getCamera();
+	}
+	std::shared_ptr<Screen> Component::getScreen()
+	{
+		return getGameObject()->getCore()->getScreen();
 	}
 }

@@ -52,7 +52,7 @@ namespace engine
 				(*it)->display();
 			}
 
-			//screen->drawWindow();
+			screen->drawWindow();
 
 			if (idealFps > deltaTime)
 			{
@@ -65,12 +65,6 @@ namespace engine
 	void Core::stop()
 	{
 		running = false;
-	}
-
-	void Core::initScreen(int width, int height, const char * name)
-	{
-		screen = std::make_shared<Screen>();
-		screen->init(self, width, height, name);
 	}
 
 	std::shared_ptr<GameObject> Core::addGameObject()
@@ -96,10 +90,7 @@ namespace engine
 	std::shared_ptr<Camera> Core::addCamera()
 	{
 		std::shared_ptr<Camera> rtn = std::make_shared<Camera>();
-		gameObjects.push_back(rtn);
 		rtn->onInit();
-		rtn->self = rtn;
-		rtn->core = self;
 		camera = rtn;
 
 		return camera;
@@ -108,10 +99,7 @@ namespace engine
 	std::shared_ptr<Camera> Core::addCamera(glm::mat4 firstProjMatrix, glm::vec3 firstPos, glm::vec3 firstRot)
 	{
 		std::shared_ptr<Camera> rtn = std::make_shared<Camera>();
-		gameObjects.push_back(rtn);
 		rtn->onInit(firstProjMatrix, firstPos, firstRot);
-		rtn->self = rtn;
-		rtn->core = self;
 		camera = rtn;
 
 		return camera;
@@ -127,9 +115,24 @@ namespace engine
 		return camera;
 	}
 
+	std::shared_ptr<Screen> Core::getScreen()
+	{
+		return screen;
+	}
+
 	void Core::setIdealFps(float fps)
 	{
 		idealFps = 1.0f / fps;
+	}
+
+	std::shared_ptr<Screen> Core::addScreen(int width, int height, const char* windowName)
+	{
+		std::shared_ptr<Screen> rtn = std::make_shared<Screen>();
+
+		rtn->init(self, width, height, windowName);
+		screen = rtn;
+
+		return rtn;
 	}
 
 }

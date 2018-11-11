@@ -1,6 +1,8 @@
 #ifndef ENGINE_GAMEOBJECT_H
 #define ENGINE_GAMEOBJECT_H
 
+#include <ext.hpp>
+
 #include <memory>
 #include <vector>
 

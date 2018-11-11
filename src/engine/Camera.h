@@ -1,5 +1,3 @@
-#include "GameObject.h"
-
 #include <ext.hpp>
 
 #include <memory>
@@ -8,8 +6,10 @@ namespace engine
 {
 	class Core;
 
-	class Camera : public GameObject
+	class Camera
 	{
+		friend class Core;
+
 		private:
 			glm::mat4 projMatrix;
 			glm::vec3 position;

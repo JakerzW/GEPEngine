@@ -9,6 +9,7 @@
 namespace engine
 {
 	class VertexArray;
+	class Texture;
 	class ShaderProgram;
 	class Camera;
 
@@ -16,13 +17,16 @@ namespace engine
 	{
 		private:
 		std::shared_ptr<VertexArray> shape;
+		std::shared_ptr<Texture> texture;
 		std::shared_ptr<ShaderProgram> shader;
-		std::string path;
+		std::string objPath;
+		std::string texPath;
 
 		void onDisplay();
 
 		public:
 		void onInit();
 		void setObjPath(std::string filePath);
+		void setTexPath(std::string filePath);
 	};
 }
