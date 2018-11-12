@@ -129,7 +129,7 @@ namespace engine
 	{
 		std::shared_ptr<Screen> rtn = std::make_shared<Screen>();
 
-		rtn->init(self, width, height, windowName);
+		rtn = rtn->init(self, width, height, windowName);
 		screen = rtn;
 
 		return rtn;

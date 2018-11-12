@@ -18,7 +18,7 @@ namespace engine
 		}
 
 		rtn->window = SDL_CreateWindow(name, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-									   width, height, SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
+			rtn->width, rtn->height, SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
 
 		if (!SDL_GL_CreateContext(rtn->window))
 		{

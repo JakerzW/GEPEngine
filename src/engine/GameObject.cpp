@@ -30,7 +30,7 @@ namespace engine
 
 	std::shared_ptr<Core> GameObject::getCore()
 	{
-		return std::shared_ptr<Core>();
+		return core.lock();
 	}
 
 }
