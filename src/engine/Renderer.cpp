@@ -49,18 +49,20 @@ namespace engine
 
 		//1. Get camera matrix
 
-		glm::mat4 camera = getCamera()->getProjMatrix();
+		//glm::mat4 camera = getCamera()->getViewMatrix();
+		glm::mat4 camera = glm::mat4(1.0f);
 
 		//2. Set model's transform components
 
-		camera = glm::mat4(1.0f);
-		camera = glm::translate(camera, getTransform()->getValue("Position"));
+		//camera = glm::mat4(1.0f);
+		//camera = glm::translate(camera, getTransform()->getValue("Position"));
 		//rotation
-		camera = glm::scale(camera, getTransform()->getValue("Scale"));
+		//camera = glm::scale(camera, getTransform()->getValue("Scale"));
 		
 		//3. Set the uniforms in the shader
 
-		shader->setUniform("in_Model", camera);
+		shader->setUniform("in_View", camera);
+		shader->setUniform("in_Model", glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, -5)));
 		shader->setUniform("in_Texture", texture);
 
 		//4. Draw using shader

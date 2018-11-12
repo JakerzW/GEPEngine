@@ -70,6 +70,7 @@ namespace engine
 		glAttachShader(id, fragmentShaderId);
 		glBindAttribLocation(id, 0, "in_Position");
 		glBindAttribLocation(id, 1, "in_Color");
+		glBindAttribLocation(id, 2, "in_TexCoord");
 
 		if (glGetError() != GL_NO_ERROR)
 		{
@@ -92,10 +93,31 @@ namespace engine
 
 	void ShaderProgram::draw(VertexArray & vertexArray)
 	{
+
 		glUseProgram(id);
 		glBindVertexArray(vertexArray.getId());
 
+		for (size_t i = 0; i < samplers.size(); i++)
+		{
+			glActiveTexture(GL_TEXTURE0 + i);
+
+			if (samplers.at(i).texture)
+			{
+				glBindTexture(GL_TEXTURE_2D, samplers.at(i).texture->getId());
+			}
+			else
+			{
+				glBindTexture(GL_TEXTURE_2D, 0);
+			}
+		}
+
 		glDrawArrays(GL_TRIANGLES, 0, vertexArray.getVertexCount());
+
+		for (size_t i = 0; i < samplers.size(); i++)
+		{
+			glActiveTexture(GL_TEXTURE0 + i);
+			glBindTexture(GL_TEXTURE_2D, 0);
+		}
 
 		glBindVertexArray(0);
 		glUseProgram(0);
