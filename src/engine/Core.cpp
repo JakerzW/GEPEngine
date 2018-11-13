@@ -5,6 +5,8 @@
 #include "Input.h"
 #include "Camera.h"
 
+#include <GL/glew.h>
+
 namespace engine
 {
 	std::shared_ptr<Core> Core::init()
@@ -22,6 +24,9 @@ namespace engine
 
 		std::shared_ptr<Context> context = std::make_shared<Context>();
 		context->initTime();
+
+		glEnable(GL_CULL_FACE);
+		glEnable(GL_DEPTH_TEST);
 
 		while (running)
 		{
@@ -45,6 +50,8 @@ namespace engine
 			{
 				(*it)->update();
 			}
+
+			screen->setupWindow();
 
 			for (std::vector<std::shared_ptr<GameObject> >::iterator it = gameObjects.begin();
 				 it != gameObjects.end(); it++)

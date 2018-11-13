@@ -41,6 +41,14 @@ namespace engine
 		SDL_GL_SwapWindow(window);
 	}
 
+	void Screen::setupWindow()
+	{
+		SDL_GetWindowSize(window, &width, &height);
+		glViewport(0, 0, width, height);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	}
+
 	void Screen::drawWindow()
 	{
 		SDL_GL_SwapWindow(window);
@@ -55,8 +63,9 @@ namespace engine
 	{
 		return height;
 	}
+
 	float Screen::getRatio()
 	{
-		return (width / height);
+		return ((float)width / (float)height);
 	}
 }
