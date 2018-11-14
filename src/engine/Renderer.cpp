@@ -53,19 +53,16 @@ namespace engine
 
 		shader->setUniform("in_View", glm::inverse(camera));
 
-		//shader->setUniform("in_Model", glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, -10)));
-		//shader->setUniform("in_Model", glm::rotate(glm::mat4(1.0f), getTransform()->getAngle(), getTransform()->getValue("Rotation")));
-
+		//Get the objects transform and pass to the shader
 		camera = glm::translate(camera, getTransform()->getValue("Position"));
 		camera = glm::rotate(camera, glm::radians(getTransform()->getAngle()), getTransform()->getValue("Rotation"));
 		camera = glm::scale(camera, getTransform()->getValue("Scale"));
 		shader->setUniform("in_Model", camera);
-
-
-		//shader->setUniform("in_Model", glm::translate(camera, getTransform()->getValue("Position")));
 		shader->setUniform("in_Texture", texture);
 
-		//4. Draw using shader
+		//shader->setUniform("in_Model", glm::translate(camera, getTransform()->getValue("Position")));
+
+		//Draw using shader
 		shader->draw(*shape);
 	}
 }

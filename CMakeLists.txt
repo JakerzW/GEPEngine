@@ -35,6 +35,8 @@ add_library(engine
 	src/engine/GameObject.h
 	src/engine/Input.cpp
 	src/engine/Input.h
+	src/engine/Player.cpp
+	src/engine/Player.h
 	src/engine/Renderer.cpp
 	src/engine/Renderer.h
 	src/engine/Screen.cpp
