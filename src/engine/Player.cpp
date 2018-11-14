@@ -1,6 +1,16 @@
 #include "Player.h"
+#include "Input.h"
 
-void engine::Player::onUpdate()
+namespace engine
 {
+	void Player::move()
+	{
 
+		//Take input and apply to transform
+	}
+
+	void Player::onUpdate()
+	{
+		move();
+	}
 }

@@ -25,6 +25,8 @@ namespace engine
 		std::shared_ptr<Context> context = std::make_shared<Context>();
 		context->initTime();
 
+		std::shared_ptr<Input> input = std::make_shared<Input>();
+
 		glEnable(GL_CULL_FACE);
 		glEnable(GL_DEPTH_TEST);
 
@@ -35,14 +37,149 @@ namespace engine
 			SDL_Event event = { 0 };
 			while (SDL_PollEvent(&event))
 			{
-				if (event.type == SDL_QUIT)
+				switch (event.type)
 				{
-					running = false;
+					case SDL_QUIT:
+					{
+						running = false;
+						break;
+					}
+
+					case SDL_KEYDOWN:
+					{
+						switch (event.key.keysym.sym)
+						{
+							case SDLK_w:
+							{
+								input->setKey("W", true);
+								break;
+							}
+							case SDLK_a:
+							{
+								input->setKey("A", true);
+								break;
+							}
+							case SDLK_s:
+							{
+								input->setKey("S", true);
+								break;
+							}
+							case SDLK_d:
+							{
+								input->setKey("D", true);
+								break;
+							}
+							case SDLK_UP:
+							{
+								input->setKey("Up", true);
+								break;
+							}
+							case SDLK_DOWN:
+							{
+								input->setKey("Down", true);
+								break;
+							}
+							case SDLK_LEFT:
+							{
+								input->setKey("Left", true);
+								break;
+							}
+							case SDLK_RIGHT:
+							{
+								input->setKey("Right", true);
+								break;
+							}
+							case SDLK_SPACE:
+							{
+								input->setKey("Space", true);
+								break;
+							}
+							case SDLK_RETURN:
+							{
+								input->setKey("Enter", true);
+								break;
+							}
+							case SDLK_ESCAPE:
+							{
+								input->setKey("Esc", true);
+								break;
+							}
+							break;
+						}
+						break;
+					}
+
+					case SDL_KEYUP:
+					{
+						switch (event.key.keysym.sym)
+						{
+							case SDLK_w:
+							{
+								input->setKey("W", false);
+								break;
+							}
+							case SDLK_a:
+							{
+								input->setKey("A", false);
+								break;
+							}
+							case SDLK_s:
+							{
+								input->setKey("S", false);
+								break;
+							}
+							case SDLK_d:
+							{
+								input->setKey("D", false);
+								break;
+							}
+							case SDLK_UP:
+							{
+								input->setKey("Up", false);
+								break;
+							}
+							case SDLK_DOWN:
+							{
+								input->setKey("Down", false);
+								break;
+							}
+							case SDLK_LEFT:
+							{
+								input->setKey("Left", false);
+								break;
+							}
+							case SDLK_RIGHT:
+							{
+								input->setKey("Right", false);
+								break;
+							}
+							case SDLK_SPACE:
+							{
+								input->setKey("Space", false);
+								break;
+							}
+							case SDLK_RETURN:
+							{
+								input->setKey("Enter", false);
+								break;
+							}
+							case SDLK_ESCAPE:
+							{
+								input->setKey("Esc", false);
+								break;
+							}
+							break;
+						}
+						break;
+					}
+
 				}
-				if (event.type == SDL_KEYDOWN)
-				{
-					running = false;
-				}
+			}
+
+			if (input->getKeyDown("Esc"))
+			{
+				running = false;
+				break;
 			}
 
 			for (std::vector<std::shared_ptr<GameObject> >::iterator it = gameObjects.begin();
@@ -63,7 +200,7 @@ namespace engine
 
 			if (idealFps > deltaTime)
 			{
-				std::cout << "Delaying..." << std::endl;
+				//std::cout << "Delaying..." << std::endl;
 				SDL_Delay((idealFps - deltaTime) * 1000.0f);
 			}
 		}
@@ -72,6 +209,26 @@ namespace engine
 	void Core::stop()
 	{
 		running = false;
+	}
+
+	void Core::setIdealFps(float fps)
+	{
+		idealFps = 1.0f / fps;
+	}
+
+	std::shared_ptr<Screen> Core::addScreen(int width, int height, const char* windowName)
+	{
+		std::shared_ptr<Screen> rtn = std::make_shared<Screen>();
+		rtn->core = self;
+		rtn = rtn->init(self, width, height, windowName);
+		screen = rtn;
+
+		return rtn;
+	}
+
+	std::shared_ptr<Screen> Core::getScreen()
+	{
+		return screen;
 	}
 
 	std::shared_ptr<GameObject> Core::addGameObject()
@@ -87,11 +244,6 @@ namespace engine
 	std::vector<std::shared_ptr<GameObject>> Core::getGameObjects()
 	{
 		return gameObjects;
-	}
-
-	std::shared_ptr<Context> Core::getContext()
-	{
-		return context;
 	}
 
 	std::shared_ptr<Camera> Core::addCamera()
@@ -119,24 +271,11 @@ namespace engine
 		return camera;
 	}
 
-	std::shared_ptr<Screen> Core::getScreen()
+	std::shared_ptr<Context> Core::getContext()
 	{
-		return screen;
+		return context;
 	}
 
-	void Core::setIdealFps(float fps)
-	{
-		idealFps = 1.0f / fps;
-	}
 
-	std::shared_ptr<Screen> Core::addScreen(int width, int height, const char* windowName)
-	{
-		std::shared_ptr<Screen> rtn = std::make_shared<Screen>();
-		rtn->core = self;
-		rtn = rtn->init(self, width, height, windowName);
-		screen = rtn;
-
-		return rtn;
-	}
 
 }

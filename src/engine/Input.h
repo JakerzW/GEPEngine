@@ -19,6 +19,7 @@ namespace engine
 
 		public:
 		Input();
+		void setKey(std::string key, bool value);
 		bool getKey(std::string key);
 		bool getKeyDown(std::string key);
 		bool getKeyUp(std::string key);

@@ -17,6 +17,17 @@ namespace engine
 		addKey("Esc");
 	}
 
+	void Input::setKey(std::string key, bool value)
+	{
+		for (size_t i = 0; i < keyCodes.size(); i++)
+		{
+			if (keyCodes.at(i).id == key)
+			{
+				keyCodes.at(i).pressed = value;
+			}
+		}
+	}
+
 	void Input::addKey(std::string newId)
 	{
 		Key rtn;
