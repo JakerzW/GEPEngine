@@ -22,6 +22,7 @@ namespace engine
 		std::weak_ptr<Core> core;
 
 		public:
+		std::shared_ptr<Core> getCore();
 		std::shared_ptr<Screen> init(std::weak_ptr<Core> corePtr, int sWidth, int sHeight, const char* name);
 		void setScreenColour(int r, int g, int b, int a);
 		void setupWindow();

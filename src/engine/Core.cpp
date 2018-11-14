@@ -63,7 +63,7 @@ namespace engine
 
 			if (idealFps > deltaTime)
 			{
-				//std::cout << "Delaying..." << std::endl;
+				std::cout << "Delaying..." << std::endl;
 				SDL_Delay((idealFps - deltaTime) * 1000.0f);
 			}
 		}
@@ -97,16 +97,18 @@ namespace engine
 	std::shared_ptr<Camera> Core::addCamera()
 	{
 		std::shared_ptr<Camera> rtn = std::make_shared<Camera>();
+		rtn->core = self;
 		rtn->onInit();
 		camera = rtn;
 
 		return camera;
 	}
 
-	std::shared_ptr<Camera> Core::addCamera(glm::mat4 firstProjMatrix, glm::vec3 firstPos, glm::vec3 firstRot)
+	std::shared_ptr<Camera> Core::addCamera(float fov, glm::mat4 firstViewMatrix, glm::vec3 firstPos, glm::vec3 firstRot)
 	{
 		std::shared_ptr<Camera> rtn = std::make_shared<Camera>();
-		rtn->onInit(firstProjMatrix, firstPos, firstRot);
+		rtn->core = self;
+		rtn->onInit(fov, firstViewMatrix, firstPos, firstRot);
 		camera = rtn;
 
 		return camera;
@@ -114,11 +116,6 @@ namespace engine
 
 	std::shared_ptr<Camera> Core::getCamera()
 	{		
-		/*if (!camera)
-		{
-			throw std::exception("Camera not found.");
-		}*/
-		
 		return camera;
 	}
 
@@ -135,7 +132,7 @@ namespace engine
 	std::shared_ptr<Screen> Core::addScreen(int width, int height, const char* windowName)
 	{
 		std::shared_ptr<Screen> rtn = std::make_shared<Screen>();
-
+		rtn->core = self;
 		rtn = rtn->init(self, width, height, windowName);
 		screen = rtn;
 

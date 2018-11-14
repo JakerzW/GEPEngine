@@ -38,7 +38,7 @@ namespace engine
 		std::vector<std::shared_ptr<GameObject>> getGameObjects();
 		std::shared_ptr<Context> getContext();
 		std::shared_ptr<Camera> addCamera();
-		std::shared_ptr<Camera> addCamera(glm::mat4 firstProjMatrix, glm::vec3 firstPos, glm::vec3 firstRot);
+		std::shared_ptr<Camera> addCamera(float fov, glm::mat4 firstViewMatrix, glm::vec3 firstPos, glm::vec3 firstRot);
 		std::shared_ptr<Camera> getCamera();
 		std::shared_ptr<Screen> getScreen();
 	};

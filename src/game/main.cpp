@@ -32,10 +32,10 @@ class OpDisplay : public engine::Component
 int main()
 {
 	std::shared_ptr<engine::Core> core = engine::Core::init();
-	std::shared_ptr<engine::Screen> screen = core->addScreen(1280, 720, "Operation Display");
+	core->setIdealFps(60.0f);
 
+	std::shared_ptr<engine::Screen> screen = core->addScreen(1280, 720, "Operation Display");
 	screen->setScreenColour(0, 0, 0, 255);
-	core->setIdealFps(3.0f);
 
 	std::shared_ptr<engine::Camera> camera = core->addCamera();
 	
@@ -49,8 +49,8 @@ int main()
 	cubeRend->setObjPath("../resources/models/cube.obj");
 	cubeRend->setTexPath("../resources/textures/cube.png");
 
-	cubeTf->setValue("Position", glm::vec3(0.0f, -2.0f, -10.0f));
-	cubeTf->setValue("Rotation", glm::vec3(0.0f, 0.0f, 0.0f));
+	cubeTf->setValue("Position", glm::vec3(4.0f, 0.0f, -20.0f));
+	cubeTf->setValue("Rotation", glm::vec3(0.0f, 1.0f, 0.0f));
 	cubeTf->setValue("Scale", glm::vec3(2.0f, 2.0f, 2.0f));
 
 	core->start();

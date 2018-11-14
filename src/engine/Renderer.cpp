@@ -45,36 +45,27 @@ namespace engine
 
 	void Renderer::onDisplay()
 	{
-		shader->setUniform("in_Projection", glm::perspective(glm::radians(45.0f), getScreen()->getRatio(), 0.1f, 100.0f));
+		//shader->setUniform("in_Projection", glm::perspective(glm::radians(45.0f), getScreen()->getRatio(), 0.1f, 100.0f));
+		shader->setUniform("in_Projection", getCamera()->getProjMatrix());
 
-		//1. Get camera matrix
-
-		
-
-		//2. Set model's transform components
-
-		//camera = glm::mat4(1.0f);
-		//camera = glm::translate(camera, getTransform()->getValue("Position"));
-		//rotation
-		//camera = glm::scale(camera, getTransform()->getValue("Scale"));
-		
-		//3. Set the uniforms in the shader
-
-
-
-
-
-
-		//glm::mat4 camera = getCamera()->getViewMatrix();
-		glm::mat4 camera = glm::mat4(1.0f);
+		//glm::mat4 camera = glm::mat4(1.0f);
+		glm::mat4 camera = getCamera()->getViewMatrix();
 
 		shader->setUniform("in_View", glm::inverse(camera));
 
-		shader->setUniform("in_Model", glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, -10)));
+		//shader->setUniform("in_Model", glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, -10)));
+		//shader->setUniform("in_Model", glm::rotate(glm::mat4(1.0f), getTransform()->getAngle(), getTransform()->getValue("Rotation")));
+
+		camera = glm::translate(camera, getTransform()->getValue("Position"));
+		camera = glm::rotate(camera, glm::radians(getTransform()->getAngle()), getTransform()->getValue("Rotation"));
+		camera = glm::scale(camera, getTransform()->getValue("Scale"));
+		shader->setUniform("in_Model", camera);
+
+
+		//shader->setUniform("in_Model", glm::translate(camera, getTransform()->getValue("Position")));
 		shader->setUniform("in_Texture", texture);
 
 		//4. Draw using shader
-
 		shader->draw(*shape);
 	}
 }

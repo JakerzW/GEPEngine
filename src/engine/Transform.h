@@ -19,5 +19,6 @@ namespace engine
 		public:
 			void setValue(std::string type, glm::vec3 value);
 			glm::vec3 getValue(std::string type);
+			float getAngle();
 	};
 }

@@ -5,7 +5,7 @@ namespace engine
 {
 	void Transform::onUpdate()
 	{
-		
+		angle += 0.5;
 	}
 
 	void Transform::setValue(std::string type, glm::vec3 value)
@@ -39,5 +39,9 @@ namespace engine
 		{
 			return scale;
 		}
+	}
+	float Transform::getAngle()
+	{
+		return angle;
 	}
 }

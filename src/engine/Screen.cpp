@@ -3,6 +3,11 @@
 
 namespace engine
 {
+	std::shared_ptr<Core> Screen::getCore()
+	{
+		return core.lock();
+	}
+
 	std::shared_ptr<Screen> Screen::init(std::weak_ptr<Core> corePtr, int sWidth, int sHeight, const char* name)
 	{
 		std::shared_ptr<Screen> rtn = std::make_shared<Screen>();
@@ -68,4 +73,5 @@ namespace engine
 	{
 		return ((float)width / (float)height);
 	}
+
 }
