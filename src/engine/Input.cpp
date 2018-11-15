@@ -8,6 +8,8 @@ namespace engine
 		addKey("A");
 		addKey("S");
 		addKey("D");
+		addKey("Q");
+		addKey("E");
 		addKey("Up");
 		addKey("Down");
 		addKey("Left");

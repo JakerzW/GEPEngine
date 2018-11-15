@@ -22,10 +22,10 @@ namespace engine
 	{
 		running = true;
 
-		std::shared_ptr<Context> context = std::make_shared<Context>();
+		context = std::make_shared<Context>();
 		context->initTime();
 
-		std::shared_ptr<Input> input = std::make_shared<Input>();
+		input = std::make_shared<Input>();
 
 		glEnable(GL_CULL_FACE);
 		glEnable(GL_DEPTH_TEST);
@@ -67,6 +67,16 @@ namespace engine
 							case SDLK_d:
 							{
 								input->setKey("D", true);
+								break;
+							}
+							case SDLK_q:
+							{
+								input->setKey("Q", true);
+								break;
+							}
+							case SDLK_e:
+							{
+								input->setKey("E", true);
 								break;
 							}
 							case SDLK_UP:
@@ -131,6 +141,16 @@ namespace engine
 							case SDLK_d:
 							{
 								input->setKey("D", false);
+								break;
+							}
+							case SDLK_q:
+							{
+								input->setKey("Q", false);
+								break;
+							}
+							case SDLK_e:
+							{
+								input->setKey("E", false);
 								break;
 							}
 							case SDLK_UP:
@@ -274,6 +294,11 @@ namespace engine
 	std::shared_ptr<Context> Core::getContext()
 	{
 		return context;
+	}
+
+	std::shared_ptr<Input> Core::getInput()
+	{
+		return input;
 	}
 
 

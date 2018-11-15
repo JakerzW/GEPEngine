@@ -45,6 +45,7 @@ int main()
 	std::shared_ptr<engine::GameObject> cube = core->addGameObject();
 	std::shared_ptr<engine::Renderer> cubeRend = cube->addComponent<engine::Renderer>();
 	std::shared_ptr<engine::Transform> cubeTf = cube->addComponent<engine::Transform>();
+	std::shared_ptr<engine::Player> cubePlayer = cube->addComponent<engine::Player>();
 
 	cubeRend->setObjPath("../resources/models/cube.obj");
 	cubeRend->setTexPath("../resources/textures/cube.png");

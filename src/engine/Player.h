@@ -6,10 +6,11 @@ namespace engine
 	{
 		private:
 			void move();
-
+			void onBegin();
 			void onUpdate();
+			int speed;
 
 		public:
-
+			void setSpeed(int newSpeed);
 	};
 }

@@ -37,8 +37,7 @@ namespace engine
 
 	std::shared_ptr<Input> Component::getInput()
 	{
-		//return getGameObject()->getCore()->getInput();
-		return std::shared_ptr<Input>();
+		return getGameObject()->getCore()->getInput();
 	}
 
 	std::shared_ptr<Context> Component::getContext()

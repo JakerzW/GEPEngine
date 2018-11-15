@@ -41,6 +41,7 @@ namespace engine
 		std::shared_ptr<Camera> addCamera(float fov, glm::mat4 firstViewMatrix, glm::vec3 firstPos, glm::vec3 firstRot);
 		std::shared_ptr<Camera> getCamera();
 		std::shared_ptr<Context> getContext();
+		std::shared_ptr<Input> getInput();
 	};
 }
 
