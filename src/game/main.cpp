@@ -85,7 +85,7 @@ class LaserObject : public engine::GameObject
 			rend->setObjPath("../resources/models/laser.obj");
 			rend->setTexPath("../resources/textures/laser.png");
 
-			tf->setValue("Position", glm::vec3(0.0f, -3.0f, -20.0f));
+			tf->setValue("Position", glm::vec3(0.0f, -3.0f, -20.0f)); //Get player's transform
 			tf->setMovement(speed, glm::vec3(0.0f, 1.0f, 0.0f));
 		}
 };
