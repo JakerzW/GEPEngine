@@ -8,7 +8,7 @@ namespace engine
 			void move();
 			void onBegin();
 			void onUpdate();
-			int speed = 10;
+			int speed = 0.1f;
 
 		public:
 			void setSpeed(int newSpeed);

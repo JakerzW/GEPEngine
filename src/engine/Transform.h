@@ -13,6 +13,9 @@ namespace engine
 			glm::vec3 rotation;
 			glm::vec3 scale;
 			float angle;
+			bool isMoving;
+			glm::vec3 movementDir;
+			int movementSpeed;
 
 			void onUpdate();
 
@@ -20,5 +23,6 @@ namespace engine
 			void setValue(std::string type, glm::vec3 value);
 			glm::vec3 getValue(std::string type);
 			float getAngle();
+			void setMovement(int newSpeed, glm::vec3 newDir);
 	};
 }

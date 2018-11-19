@@ -46,7 +46,7 @@ class PlayerObject : public engine::GameObject
 			tf->setValue("Rotation", glm::vec3(0.0f, 1.0f, 0.0f));
 			tf->setValue("Scale", glm::vec3(1.0f, 1.0f, 1.0f));
 
-			player->setSpeed(100);
+			player->setSpeed(10);
 		}		
 };
 
@@ -70,6 +70,9 @@ class AsteroidObject : public engine::GameObject
 
 class LaserObject : public engine::GameObject
 {
+	private:
+		int speed = 5;
+
 	public:
 		LaserObject(std::shared_ptr<engine::Core> corePtr)
 		{
@@ -83,6 +86,7 @@ class LaserObject : public engine::GameObject
 			rend->setTexPath("../resources/textures/laser.png");
 
 			tf->setValue("Position", glm::vec3(0.0f, -3.0f, -20.0f));
+			tf->setMovement(speed, glm::vec3(0.0f, 1.0f, 0.0f));
 		}
 };
 
@@ -100,7 +104,7 @@ int main()
 	std::shared_ptr<OpDisplay> od = opDisplay->addComponent<OpDisplay>("Start-up successful...");
 
 	std::shared_ptr<PlayerObject> player = std::make_shared<PlayerObject>(core);
-	std::shared_ptr<AsteroidObject> asteroid = std::make_shared<AsteroidObject>(core);
+	//std::shared_ptr<AsteroidObject> asteroid = std::make_shared<AsteroidObject>(core);
 	std::shared_ptr<LaserObject> laser = std::make_shared<LaserObject>(core);
 
 	core->start();

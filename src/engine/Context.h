@@ -11,6 +11,7 @@ namespace engine
 		float difference;
 
 		public:
+		void update();
 		void initTime();
 		float getDeltaTime();
 	};

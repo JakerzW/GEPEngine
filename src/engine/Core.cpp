@@ -32,7 +32,7 @@ namespace engine
 
 		while (running)
 		{
-			deltaTime = context->getDeltaTime();
+			context->update();
 
 			SDL_Event event = { 0 };
 			while (SDL_PollEvent(&event))

@@ -1,11 +1,17 @@
 #include "Transform.h"
 #include "Camera.h"
+#include "Context.h"
 
 namespace engine
 {
 	void Transform::onUpdate()
 	{
-		//angle += 0.5;
+		if (isMoving)
+		{
+			position.x += (movementDir.x * movementSpeed * getContext()->getDeltaTime());
+			position.y += (movementDir.y * movementSpeed * getContext()->getDeltaTime());
+			position.z += (movementDir.z * movementSpeed * getContext()->getDeltaTime());
+		}
 	}
 
 	void Transform::setValue(std::string type, glm::vec3 value)
@@ -40,8 +46,16 @@ namespace engine
 			return scale;
 		}
 	}
+
 	float Transform::getAngle()
 	{
 		return angle;
+	}
+
+	void Transform::setMovement(int newSpeed, glm::vec3 newDir)
+	{
+		movementSpeed = newSpeed;
+		movementDir = newDir;
+		isMoving = true;
 	}
 }
