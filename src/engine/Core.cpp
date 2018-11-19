@@ -221,7 +221,8 @@ namespace engine
 			if (idealFps > deltaTime)
 			{
 				//std::cout << "Delaying..." << std::endl;
-				SDL_Delay((idealFps - deltaTime) * 1000.0f);
+				unsigned int delay = (idealFps - deltaTime) * 1000.0f;
+				SDL_Delay(delay);
 			}
 		}
 	}

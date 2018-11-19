@@ -40,7 +40,7 @@ namespace engine
 
 	void Player::onBegin()
 	{
-		speed = 100;
+
 	}
 
 	void Player::onUpdate()
