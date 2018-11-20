@@ -6,6 +6,7 @@
 #include <iostream>
 #include <memory>
 #include <vector>
+#include <list>
 
 namespace engine
 {
@@ -26,6 +27,7 @@ namespace engine
 		std::shared_ptr<Input> input;
 		std::shared_ptr<Camera> camera;
 		std::vector<std::shared_ptr<GameObject>> gameObjects;
+		//std::list<std::shared_ptr<GameObject>> gameObjects;
 		std::weak_ptr<Core> self;
 
 		public:
@@ -37,6 +39,7 @@ namespace engine
 		std::shared_ptr<Screen> getScreen();
 		std::shared_ptr<GameObject> addGameObject();
 		std::vector<std::shared_ptr<GameObject>> getGameObjects();
+		//std::list<std::shared_ptr<GameObject>> getGameObjects();
 		std::shared_ptr<Camera> addCamera();
 		std::shared_ptr<Camera> addCamera(float fov, glm::mat4 firstViewMatrix, glm::vec3 firstPos, glm::vec3 firstRot);
 		std::shared_ptr<Camera> getCamera();

@@ -10,4 +10,5 @@ class PlayerController : public engine::Player
 	
 	public:
 		void shoot(std::shared_ptr<engine::Core> corePtr);	
+		bool getShotMade();
 };

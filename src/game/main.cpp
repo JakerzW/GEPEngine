@@ -25,7 +25,7 @@ class OpDisplay : public engine::Component
 	void onUpdate()
 	{
 		//std::cout.flush();
-		std::cout << "FPS: " << getContext()->getAvgFps() << std::endl;
+		//std::cout << "FPS: " << getContext()->getAvgFps() << std::endl;
 		//std::cout << "onUpdate" << std::endl;
 	}
 

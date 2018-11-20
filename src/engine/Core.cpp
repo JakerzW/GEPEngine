@@ -202,10 +202,15 @@ namespace engine
 				break;
 			}
 
-			for (std::vector<std::shared_ptr<GameObject> >::iterator it = gameObjects.begin();
+			/*for (std::vector<std::shared_ptr<GameObject> >::iterator it = gameObjects.begin();
 				 it != gameObjects.end(); it++)
 			{
 				(*it)->update();
+			}*/
+
+			for (size_t i = 0; i < gameObjects.size(); i++)
+			{
+				gameObjects.at(i)->update();
 			}
 
 			screen->setupWindow();
@@ -266,6 +271,11 @@ namespace engine
 	{
 		return gameObjects;
 	}
+
+	/*std::list<std::shared_ptr<GameObject>> Core::getGameObjects()
+	{
+		return gameObjects;
+	}*/
 
 	std::shared_ptr<Camera> Core::addCamera()
 	{

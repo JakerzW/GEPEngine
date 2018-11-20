@@ -7,7 +7,7 @@ namespace engine
 {
 	class Player : public Component
 	{
-		private:
+		protected:
 			void move();
 			void onBegin();
 			void onUpdate();
