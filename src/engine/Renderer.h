@@ -1,3 +1,6 @@
+#ifndef ENGINE_RENDERER_H
+#define ENGINE_RENDERER_H
+
 #include "Component.h"
 
 #include "glm.hpp"
@@ -30,3 +33,5 @@ namespace engine
 		void setTexPath(std::string filePath);
 	};
 }
+
+#endif

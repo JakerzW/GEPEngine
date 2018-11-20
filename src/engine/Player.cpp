@@ -34,6 +34,10 @@ namespace engine
 		{
 			newPosition.z += speed * getContext()->getDeltaTime();
 		}
+		if (getInput()->getKeyDown("Space"))
+		{
+			shoot();
+		}
 
 		getTransform()->setValue("Position", newPosition);
 	}
@@ -51,5 +55,10 @@ namespace engine
 	void Player::setSpeed(int newSpeed)
 	{
 		speed = newSpeed;
+	}
+
+	void Player::shoot()
+	{
+
 	}
 }

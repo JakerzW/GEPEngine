@@ -1,3 +1,6 @@
+#ifndef ENGINE_PLAYER_H
+#define ENGINE_PLAYER_H
+
 #include "Component.h"
 
 namespace engine
@@ -12,5 +15,8 @@ namespace engine
 
 		public:
 			void setSpeed(int newSpeed);
+			virtual void shoot();
 	};
 }
+
+#endif

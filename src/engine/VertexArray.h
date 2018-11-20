@@ -1,3 +1,6 @@
+#ifndef ENGINE_VERTEXARRAY_H
+#define ENGINE_VERTEXARRAY_H
+
 #include <GL\glew.h>
 #include <glm.hpp>
 
@@ -27,3 +30,5 @@ namespace engine
 		GLuint getId();
 	};
 }
+
+#endif

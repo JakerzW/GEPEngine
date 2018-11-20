@@ -1,3 +1,6 @@
+#ifndef ENGINE_SHADERPROGRAM_H
+#define ENGINE_SHADERPROGRAM_H
+
 #include <GL/glew.h>
 #include <glm.hpp>
 
@@ -32,4 +35,6 @@ namespace engine
 		GLuint getId();
 	};
 }
+
+#endif
 

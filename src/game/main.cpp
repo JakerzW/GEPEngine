@@ -1,4 +1,8 @@
 #include "engine/Engine.h"
+#include "AsteroidObject.h"
+#include "LaserObject.h"
+#include "PlayerController.h"
+#include "PlayerObject.h"
 
 #include <SDL2\SDL.h>
 #include <GL\glew.h>
@@ -20,6 +24,8 @@ class OpDisplay : public engine::Component
 
 	void onUpdate()
 	{
+		//std::cout.flush();
+		std::cout << "FPS: " << getContext()->getAvgFps() << std::endl;
 		//std::cout << "onUpdate" << std::endl;
 	}
 
@@ -29,71 +35,10 @@ class OpDisplay : public engine::Component
 	}
 };
 
-class PlayerObject : public engine::GameObject
-{
-	public:
-		PlayerObject(std::shared_ptr<engine::Core> corePtr)
-		{
-			std::shared_ptr<engine::GameObject> self = corePtr->addGameObject();
-			std::shared_ptr<engine::Renderer> rend = self->addComponent<engine::Renderer>();
-			std::shared_ptr<engine::Transform> tf = self->addComponent<engine::Transform>();
-			std::shared_ptr<engine::Player> player = self->addComponent<engine::Player>();
-
-			rend->setObjPath("../resources/models/ship.obj");
-			rend->setTexPath("../resources/textures/ship.png");
-
-			tf->setValue("Position", glm::vec3(0.0f, -4.0f, -20.0f));
-			tf->setValue("Rotation", glm::vec3(0.0f, 1.0f, 0.0f));
-			tf->setValue("Scale", glm::vec3(1.0f, 1.0f, 1.0f));
-
-			player->setSpeed(10);
-		}		
-};
-
-class AsteroidObject : public engine::GameObject
-{
-	public:
-		AsteroidObject(std::shared_ptr<engine::Core> corePtr)
-		{
-			std::shared_ptr<engine::GameObject> self = corePtr->addGameObject();
-			std::shared_ptr<engine::Renderer> rend = self->addComponent<engine::Renderer>();
-			std::shared_ptr<engine::Transform> tf = self->addComponent<engine::Transform>();
-
-			rend->setObjPath("../resources/models/asteroid.obj");
-			rend->setTexPath("../resources/textures/asteroid.png");
-
-			tf->setValue("Position", glm::vec3(0.0f, 0.0f, -20.0f));
-			tf->setValue("Rotation", glm::vec3(0.0f, 1.0f, 0.0f));
-			tf->setValue("Scale", glm::vec3(2.0f, 2.0f, 2.0f));
-		}
-};
-
-class LaserObject : public engine::GameObject
-{
-	private:
-		int speed = 5;
-
-	public:
-		LaserObject(std::shared_ptr<engine::Core> corePtr)
-		{
-			std::shared_ptr<engine::GameObject> self = corePtr->addGameObject();
-			std::shared_ptr<engine::Renderer> rend = self->addComponent<engine::Renderer>();
-			std::shared_ptr<engine::Transform> tf = self->addComponent<engine::Transform>();
-
-			//std::shared_ptr<engine::Player> player = self->addComponent<engine::Player>();
-
-			rend->setObjPath("../resources/models/laser.obj");
-			rend->setTexPath("../resources/textures/laser.png");
-
-			tf->setValue("Position", glm::vec3(0.0f, -3.0f, -20.0f)); //Get player's transform
-			tf->setMovement(speed, glm::vec3(0.0f, 1.0f, 0.0f));
-		}
-};
-
 int main()
 {
 	std::shared_ptr<engine::Core> core = engine::Core::init();
-	core->setIdealFps(60.0f);
+	core->setIdealFps(120.0f);
 
 	std::shared_ptr<engine::Screen> screen = core->addScreen(1280, 720, "Operation Display");
 	screen->setScreenColour(0, 0, 0, 255);

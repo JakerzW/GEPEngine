@@ -1,3 +1,6 @@
+#ifndef ENGINE_CAMERA_H
+#define ENGINE_CAMERA_H
+
 #include <ext.hpp>
 
 #include <memory>
@@ -32,3 +35,5 @@ namespace engine
 	};
 
 }
+
+#endif

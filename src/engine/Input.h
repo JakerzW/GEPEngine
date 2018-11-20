@@ -1,3 +1,6 @@
+#ifndef ENGINE_INPUT_H
+#define ENGINE_INPUT_H
+
 #include <vector>
 #include <string>
 
@@ -25,3 +28,5 @@ namespace engine
 		bool getKeyUp(std::string key);
 	};
 }
+
+#endif

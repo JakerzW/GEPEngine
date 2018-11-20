@@ -1,3 +1,6 @@
+#ifndef ENGINE_TEXTURE_H
+#define ENGINE_TEXTURE_H
+
 #include <GL/glew.h>
 #include <glm.hpp>
 
@@ -18,3 +21,5 @@ namespace engine
 
 	};
 }
+
+#endif

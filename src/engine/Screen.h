@@ -1,3 +1,6 @@
+#ifndef ENGINE_SCREEN_H
+#define ENGINE_SCREEN_H
+
 #include <SDL2\SDL.h>
 #include <GL\glew.h>
 #include <ext.hpp>
@@ -32,3 +35,5 @@ namespace engine
 		float getRatio();
 	};
 }
+
+#endif

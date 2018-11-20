@@ -1,3 +1,6 @@
+#ifndef ENGINE_TRANSFORM_H
+#define ENGINE_TRANSFORM_H
+
 #include "Component.h"
 
 #include "glm.hpp"
@@ -26,3 +29,5 @@ namespace engine
 			void setMovement(int newSpeed, glm::vec3 newDir);
 	};
 }
+
+#endif

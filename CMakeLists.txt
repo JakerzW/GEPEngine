@@ -64,7 +64,15 @@ else()
 endif()
 
 add_executable(game 
+	src/game/AsteroidObject.cpp
+	src/game/AsteroidObject.h
+	src/game/LaserObject.cpp
+	src/game/LaserObject.h
 	src/game/main.cpp
+	src/game/PlayerController.cpp
+	src/game/PlayerController.h
+	src/game/PlayerObject.cpp
+	src/game/PlayerObject.h
 )
 
 target_link_libraries(game engine)

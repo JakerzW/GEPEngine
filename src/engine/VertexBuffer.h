@@ -1,3 +1,6 @@
+#ifndef ENGINE_VERTEXBUFFER_H
+#define ENGINE_VERTEXBUFFER_H
+
 #include <GL\glew.h>
 #include <glm.hpp>
 
@@ -23,3 +26,5 @@ namespace engine
 		GLuint getId();
 	};
 }
+
+#endif
