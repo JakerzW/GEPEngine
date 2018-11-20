@@ -40,7 +40,7 @@ int main()
 	std::shared_ptr<engine::Core> core = engine::Core::init();
 	core->setIdealFps(120.0f);
 
-	std::shared_ptr<engine::Screen> screen = core->addScreen(1280, 720, "Operation Display");
+	std::shared_ptr<engine::Screen> screen = core->addScreen(900, 900, "Operation Display");
 	screen->setScreenColour(0, 0, 0, 255);
 
 	std::shared_ptr<engine::Camera> camera = core->addCamera();
@@ -50,7 +50,6 @@ int main()
 
 	std::shared_ptr<PlayerObject> player = std::make_shared<PlayerObject>(core);
 	//std::shared_ptr<AsteroidObject> asteroid = std::make_shared<AsteroidObject>(core);
-	std::shared_ptr<LaserObject> laser = std::make_shared<LaserObject>(core);
 
 	core->start();
 

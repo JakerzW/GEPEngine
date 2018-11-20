@@ -19,6 +19,7 @@ void PlayerController::onUpdate()
 void PlayerController::shoot(std::shared_ptr<engine::Core> corePtr)
 {	
 	std::shared_ptr<LaserObject> newLaser = std::make_shared<LaserObject>(corePtr);
+	newLaser->setStart(getTransform()->getValue("Position"));	
 }
 
 bool PlayerController::getShotMade()
