@@ -12,6 +12,8 @@ namespace engine
 	class Transform;
 	class Camera;
 	class Screen;
+	class Collision;
+	class ID;
 
 	class Component
 	{
@@ -34,6 +36,8 @@ namespace engine
 			std::shared_ptr<Transform> getTransform();
 			std::shared_ptr<Camera> getCamera();
 			std::shared_ptr<Screen> getScreen();
+			std::shared_ptr<Collision> getCollision();
+			std::shared_ptr<ID> getId();
 	};
 }
 

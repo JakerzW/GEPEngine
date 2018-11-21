@@ -3,8 +3,38 @@
 
 void PlayerController::onUpdate()
 {	
-	move();
+	//move();
 
+	glm::vec3 newPosition = getTransform()->getValue("Position");
+
+	if (getInput()->getKeyDown("W"))
+	{
+		if (newPosition.y < -2.0f)
+		{
+			newPosition.y += speed * getContext()->getDeltaTime();
+		}
+	}
+	if (getInput()->getKeyDown("A"))
+	{
+		if (newPosition.x > -7.1f)
+		{
+			newPosition.x -= speed * getContext()->getDeltaTime();
+		}		
+	}
+	if (getInput()->getKeyDown("S"))
+	{
+		if (newPosition.y > -6.8f)
+		{
+			newPosition.y -= speed * getContext()->getDeltaTime();
+		}
+	}
+	if (getInput()->getKeyDown("D"))
+	{
+		if (newPosition.x < 7.1f)
+		{
+			newPosition.x += speed * getContext()->getDeltaTime();
+		}
+	}
  	if (getInput()->getKeyDown("Space") && !shotMade)
 	{
 		shoot(getCore());
@@ -14,6 +44,8 @@ void PlayerController::onUpdate()
 	{
 		shotMade = false;
 	}	
+
+	getTransform()->setValue("Position", newPosition);
 }
 
 void PlayerController::shoot(std::shared_ptr<engine::Core> corePtr)

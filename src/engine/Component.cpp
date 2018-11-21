@@ -6,6 +6,8 @@
 #include "Transform.h"
 #include "Camera.h"
 #include "Screen.h"
+#include "Collision.h"
+#include "ID.h"
 
 namespace engine 
 {
@@ -57,5 +59,13 @@ namespace engine
 	std::shared_ptr<Screen> Component::getScreen()
 	{
 		return getGameObject()->getCore()->getScreen();
+	}
+	std::shared_ptr<Collision> Component::getCollision()
+	{
+		return getGameObject()->getComponent<Collision>();
+	}
+	std::shared_ptr<ID> Component::getId()
+	{
+		return getGameObject()->getComponent<ID>();
 	}
 }

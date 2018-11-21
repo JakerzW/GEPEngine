@@ -25,6 +25,8 @@ add_library(engine
 	src/engine/Engine.h
 	src/engine/Camera.cpp
 	src/engine/Camera.h
+	src/engine/Collision.cpp
+	src/engine/Collision.h
 	src/engine/Component.cpp
 	src/engine/Component.h
 	src/engine/Context.cpp
@@ -33,6 +35,8 @@ add_library(engine
 	src/engine/Core.h
 	src/engine/GameObject.cpp
 	src/engine/GameObject.h
+	src/engine/ID.cpp
+	src/engine/ID.h
 	src/engine/Input.cpp
 	src/engine/Input.h
 	src/engine/Player.cpp
@@ -65,7 +69,9 @@ endif()
 
 add_executable(game 
 	src/game/AsteroidObject.cpp
-	src/game/AsteroidObject.h
+	src/game/AsteroidObject.h 
+	src/game/GameCollider.cpp
+	src/game/GameCollider.h
 	src/game/LaserObject.cpp
 	src/game/LaserObject.h
 	src/game/main.cpp

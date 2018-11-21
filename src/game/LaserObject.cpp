@@ -15,6 +15,6 @@ LaserObject::LaserObject(std::shared_ptr<engine::Core> corePtr)
 
 void LaserObject::setStart(glm::vec3 position)
 {
-	tf->setValue("Position", position); //Get player's transform
+	tf->setValue("Position", glm::vec3(position.x, position.y + 0.5, position.z)); //Get player's transform
 	tf->setMovement(speed, glm::vec3(0.0f, 1.0f, 0.0f));
 }
