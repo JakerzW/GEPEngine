@@ -49,7 +49,7 @@ int main()
 	std::shared_ptr<OpDisplay> od = opDisplay->addComponent<OpDisplay>("Start-up successful...");
 
 	std::shared_ptr<PlayerObject> player = std::make_shared<PlayerObject>(core);
-	//std::shared_ptr<AsteroidObject> asteroid = std::make_shared<AsteroidObject>(core);
+	std::shared_ptr<AsteroidObject> asteroid = std::make_shared<AsteroidObject>(core);
 
 	core->start();
 

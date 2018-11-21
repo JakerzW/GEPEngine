@@ -1,3 +1,6 @@
+#ifndef ENGINE_ID_H
+#define ENGINE_ID_H
+
 #include "Component.h"
 
 #include <string>
@@ -10,7 +13,9 @@ namespace engine
 			std::string id;
 		
 		public:
-			ID(std::string newId);
-			std::string getId();
+			void setID(std::string newId);
+			std::string getThisId();
 	};
 }
+
+#endif

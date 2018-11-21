@@ -1,5 +1,6 @@
 #include "PlayerObject.h"
 #include "PlayerController.h"
+#include "GameCollider.h"
 
 PlayerObject::PlayerObject(std::shared_ptr<engine::Core> corePtr)
 {
@@ -7,6 +8,8 @@ PlayerObject::PlayerObject(std::shared_ptr<engine::Core> corePtr)
 	std::shared_ptr<engine::Renderer> rend = self->addComponent<engine::Renderer>();
 	std::shared_ptr<engine::Transform> tf = self->addComponent<engine::Transform>();
 	std::shared_ptr<PlayerController> player = self->addComponent<PlayerController>();
+	std::shared_ptr<engine::ID> id = self->addComponent<engine::ID>();
+	//std::shared_ptr<GameCollider> gc = self->addComponent<GameCollider>();
 
 	rend->setObjPath("../resources/models/ship.obj");
 	rend->setTexPath("../resources/textures/ship.png");
@@ -16,4 +19,6 @@ PlayerObject::PlayerObject(std::shared_ptr<engine::Core> corePtr)
 	tf->setValue("Scale", glm::vec3(1.0f, 1.0f, 1.0f));
 
 	player->setSpeed(10);
+
+	id->setID("Player");
 }

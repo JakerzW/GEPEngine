@@ -4,11 +4,17 @@
 #include "Transform.h"
 
 #include <vector>
+
 namespace engine
 {
 	void Collision::onUpdate()
 	{
 		checkCollisions();
+	}
+
+	Collision::Collision()
+	{
+		exists = true;
 	}
 
 	void Collision::setSize(glm::vec3 newSize)
@@ -42,10 +48,6 @@ namespace engine
 				{
 					hasCollided = true;
 					collisionObject = gameObjects.at(i);
-					//do something
-
-					//delete getCore()->getGameObjects.at(i);
-					//delete self;
 				}
 			}
 		}
@@ -59,5 +61,9 @@ namespace engine
 	std::shared_ptr<GameObject> Collision::getCollisionObject()
 	{
 		return collisionObject;
+	}
+	bool Collision::getExists()
+	{
+		return exists;
 	}
 }
