@@ -31,13 +31,13 @@ namespace engine
 	{
 		currentPos = getTransform()->getValue("Position");
 
-		std::vector<std::shared_ptr<GameObject>> gameObjects = getCore()->getGameObjects();
-		for (size_t i = 0; i < gameObjects.size(); i++)
+		//std::vector<std::shared_ptr<GameObject>> gameObjects = getCore()->getGameObjects();
+		for (size_t i = 0; i < getCore()->getGameObjects().size(); i++)
 		{
-			if (gameObjects.at(i)->getComponent<Collision>())
+			if (getCore()->getGameObjects().at(i)->getComponent<Collision>() && getCore()->getGameObjects().at(i) != getGameObject())
 			{
-				glm::vec3 otherPos = gameObjects.at(i)->getComponent<Transform>()->getValue("Position");
-				glm::vec3 otherSize = gameObjects.at(i)->getComponent<Collision>()->getSize();
+				glm::vec3 otherPos = getCore()->getGameObjects().at(i)->getComponent<Transform>()->getValue("Position");
+				glm::vec3 otherSize = getCore()->getGameObjects().at(i)->getComponent<Collision>()->getSize();
 
 				glm::vec3 thisMin = currentPos - size;
 				glm::vec3 thisMax = currentPos + size;
@@ -47,8 +47,10 @@ namespace engine
 				if ((thisMax.x >= otherMin.x || otherMax.x >= thisMin.x) && (thisMax.y >= otherMin.y || otherMax.y >= thisMin.y) && (thisMax.z >= otherMin.z || otherMax.z >= thisMin.z))
 				{
 					hasCollided = true;
-					collisionObject = gameObjects.at(i);
+					collisionObject = getCore()->getGameObjects().at(i);
 				}
+
+				break;
 			}
 		}
 	}

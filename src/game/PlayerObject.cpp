@@ -9,7 +9,7 @@ PlayerObject::PlayerObject(std::shared_ptr<engine::Core> corePtr)
 	std::shared_ptr<engine::Transform> tf = self->addComponent<engine::Transform>();
 	std::shared_ptr<PlayerController> player = self->addComponent<PlayerController>();
 	std::shared_ptr<engine::ID> id = self->addComponent<engine::ID>();
-	std::shared_ptr<GameCollider> gc = self->addComponent<GameCollider>();
+	//std::shared_ptr<GameCollider> gc = self->addComponent<GameCollider>();
 
 	rend->setObjPath("../resources/models/ship.obj");
 	rend->setTexPath("../resources/textures/ship.png");
@@ -22,5 +22,5 @@ PlayerObject::PlayerObject(std::shared_ptr<engine::Core> corePtr)
 
 	id->setID("Player");
 
-	gc->setSize(glm::vec3(1, 1, 1));
+	//gc->setSize(glm::vec3(1, 1, 1));
 }

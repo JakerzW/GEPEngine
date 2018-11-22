@@ -45,11 +45,17 @@ int main()
 
 	std::shared_ptr<engine::Camera> camera = core->addCamera();
 	
-	std::shared_ptr<engine::GameObject> opDisplay = core->addGameObject();
-	std::shared_ptr<OpDisplay> od = opDisplay->addComponent<OpDisplay>("Start-up successful...");
+	//std::shared_ptr<engine::GameObject> opDisplay = core->addGameObject();
+	//std::shared_ptr<OpDisplay> od = opDisplay->addComponent<OpDisplay>("Start-up successful...");
 
 	std::shared_ptr<PlayerObject> player = std::make_shared<PlayerObject>(core);
 	std::shared_ptr<AsteroidObject> asteroid = std::make_shared<AsteroidObject>(core);
+	std::shared_ptr<AsteroidObject> asteroid2 = std::make_shared<AsteroidObject>(core);
+	asteroid2->changePos(glm::vec3(-3, 3, -20));
+	std::shared_ptr<AsteroidObject> asteroid3 = std::make_shared<AsteroidObject>(core);
+	asteroid3->changePos(glm::vec3(3, 2, -20));
+	std::shared_ptr<AsteroidObject> asteroid4 = std::make_shared<AsteroidObject>(core);
+	asteroid4->changePos(glm::vec3(-6, 6, -20));
 
 	core->start();
 

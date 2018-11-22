@@ -8,14 +8,14 @@ LaserObject::LaserObject(std::shared_ptr<engine::Core> corePtr)
 	std::shared_ptr<engine::Renderer> rend = self->addComponent<engine::Renderer>();
 	tf = self->addComponent<engine::Transform>();
 	std::shared_ptr<engine::ID> id = self->addComponent<engine::ID>();
-	std::shared_ptr<GameCollider> gc = self->addComponent<GameCollider>();
+	//std::shared_ptr<GameCollider> gc = self->addComponent<GameCollider>();
 
 	rend->setObjPath("../resources/models/laser.obj");
 	rend->setTexPath("../resources/textures/laser.png");
 
 	id->setID("Laser");
 
-	gc->setSize(glm::vec3(1, 1, 1));
+	//gc->setSize(glm::vec3(1, 1, 1));
 }
 
 void LaserObject::setStart(glm::vec3 position)
